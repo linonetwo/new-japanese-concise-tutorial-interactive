@@ -1,4 +1,6 @@
 import { createModel } from '@rematch/core';
+import { last } from 'lodash';
+
 import { iRootState } from './';
 
 export interface IState {
@@ -76,9 +78,15 @@ export default createModel({
       state.panels[panelID].tabIDs = state.panels[panelID].tabIDs.filter(
         id => id !== tabID,
       );
-      // clear current text if closed tab is previously focused tab
+      // clear current text if closed tab was last tab
       if (state.panels[panelID].currentTextID === textID) {
         state.panels[panelID].currentTextID = null;
+      }
+      // load text if there is a remaining tab
+      const lastTabID = last(state.panels[panelID].tabIDs);
+      if (lastTabID) {
+        state.panels[panelID].currentTextID =
+          state.panels[panelID].tabs[lastTabID].textID;
       }
       return state;
     },
@@ -87,10 +95,19 @@ export default createModel({
     /**
      * open a new tab in a panel, and load a text with given ID into this tab
      */
-    newTab(payload: { panelID?: string; textID: string }, { panel: state }) {
+    async newTab(
+      payload: { panelID?: string; textID: string },
+      { panel: state },
+    ) {
       // initially there is no panel, so create one
       if (state.panelIDs.length === 0) {
         this.newPanel(payload.textID);
+        const newPanelIDs = (await import('./')).default.getState().panel
+          .panelIDs[0];
+        this.loadTextToNewTabOfPanel({
+          panelID: newPanelIDs,
+          ...payload,
+        });
       } else {
         // or add tab to existed panel, add to first panel or a provided panel
         let panelID = state.panelIDs[0];
@@ -107,10 +124,17 @@ export default createModel({
           tabID: newTabID,
           tabConfig,
         });
+        this.loadTextToNewTabOfPanel({ panelID, ...payload });
       }
-
+    },
+    async loadTextToNewTabOfPanel(payload: {
+      panelID: string;
+      textID: string;
+    }) {
       // load text into panel
       this.loadTextToPanel(payload);
+      const { dispatch } = await import('./');
+      dispatch.texts.fetchTextFromPOD(payload.textID);
     },
   },
 });

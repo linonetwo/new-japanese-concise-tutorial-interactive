@@ -936,6 +936,12 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
+"@types/slate-plain-serializer@^0.6.1":
+  version "0.6.1"
+  resolved "http://registry.npm.taobao.org/@types/slate-plain-serializer/download/@types/slate-plain-serializer-0.6.1.tgz#c392ce51621f7c55df0976f161dcfca18bd559ee"
+  dependencies:
+    "@types/slate" "*"
+
 "@types/slate-react@^0.20.3":
   version "0.20.3"
   resolved "http://registry.npm.taobao.org/@types/slate-react/download/@types/slate-react-0.20.3.tgz#a2a09c448954b03d518a6c651ac3b4f7b6e91e1a"
