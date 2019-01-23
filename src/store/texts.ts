@@ -1,4 +1,5 @@
 import { createModel } from '@rematch/core';
+import { find, omit } from 'lodash';
 
 export interface IState {
   textIDs: string[];
@@ -49,11 +50,15 @@ export default createModel({
         text: 'Loading...',
       });
       await new Promise(resolve => setTimeout(resolve, 1000));
+      const text = find(await import('./text.example.json'), ['textID', textID]);
       this.loadText({ textID, title: '', brief: 'Loaded!', text: 'Loaded!' });
     },
     async fetchTextBookFromPOD(textID: string) {
       await new Promise(resolve => setTimeout(resolve, 1000));
-      this.loadTextBook([{ title: 'string', brief: 'string;', textID: 'string' }]);
+      const textList = (await import('./text.example.json')).default.map(obj =>
+        omit(obj, ['text']),
+      );
+      this.loadTextBook(textList);
     },
   },
 });

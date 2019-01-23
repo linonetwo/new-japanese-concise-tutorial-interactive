@@ -29,7 +29,12 @@ const initialValue = Value.fromJSON({
 
 const Container = styled.div``;
 const TabBar = styled.nav``;
-const Tab = styled.button``;
+const Tab = styled.div`
+  height: 35px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+`;
 
 interface IPanelProps {
   id: string;

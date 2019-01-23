@@ -784,6 +784,10 @@
   version "1.4.0"
   resolved "http://registry.npm.taobao.org/@csstools/convert-colors/download/@csstools/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
 
+"@emmetio/extract-abbreviation@0.1.6":
+  version "0.1.6"
+  resolved "http://registry.npm.taobao.org/@emmetio/extract-abbreviation/download/@emmetio/extract-abbreviation-0.1.6.tgz#e4a9856c1057f0aff7d443b8536477c243abe28c"
+
 "@emotion/is-prop-valid@^0.7.3":
   version "0.7.3"
   resolved "http://registry.npm.taobao.org/@emotion/is-prop-valid/download/@emotion/is-prop-valid-0.7.3.tgz#a6bf4fa5387cbba59d44e698a4680f481a8da6cc"
@@ -895,6 +899,10 @@
 "@types/jest@23.3.13":
   version "23.3.13"
   resolved "http://registry.npm.taobao.org/@types/jest/download/@types/jest-23.3.13.tgz#c81484b6f4ca007bb09887ed15ecb3286d58f928"
+
+"@types/lodash@^4.14.120":
+  version "4.14.120"
+  resolved "http://registry.npm.taobao.org/@types/lodash/download/@types/lodash-4.14.120.tgz#cf265d06f6c7a710db087ed07523ab8c1a24047b"
 
 "@types/node@*", "@types/node@10.12.18":
   version "10.12.18"
@@ -5226,6 +5234,10 @@ json5@^2.1.0:
   dependencies:
     minimist "^1.2.0"
 
+jsonc-parser@^1.0.0:
+  version "1.0.3"
+  resolved "http://registry.npm.taobao.org/jsonc-parser/download/jsonc-parser-1.0.3.tgz#1d53d7160e401a783dbceabaad82473f80e6ad7e"
+
 jsonfile@^4.0.0:
   version "4.0.0"
   resolved "http://registry.npm.taobao.org/jsonfile/download/jsonfile-4.0.0.tgz#8771aae0799b64076b76640fca058f9c10e33ecb"
@@ -8672,6 +8684,19 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "http://registry.npm.taobao.org/typedarray/download/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
+typescript-styled-plugin@^0.13.0:
+  version "0.13.0"
+  resolved "http://registry.npm.taobao.org/typescript-styled-plugin/download/typescript-styled-plugin-0.13.0.tgz#e5d3d1293b9b85cffd473f01a7f4917ad6035ee5"
+  dependencies:
+    typescript-template-language-service-decorator "^2.0.0"
+    vscode-css-languageservice "^3.0.12"
+    vscode-emmet-helper "1.2.11"
+    vscode-languageserver-types "^3.13.0"
+
+typescript-template-language-service-decorator@^2.0.0:
+  version "2.2.0"
+  resolved "http://registry.npm.taobao.org/typescript-template-language-service-decorator/download/typescript-template-language-service-decorator-2.2.0.tgz#4ee6d580f307fb9239978e69626f2775b8a59b2a"
+
 typescript@3.2.4:
   version "3.2.4"
   resolved "http://registry.npm.taobao.org/typescript/download/typescript-3.2.4.tgz#c585cb952912263d915b462726ce244ba510ef3d"
@@ -8885,6 +8910,29 @@ vm-browserify@0.0.4:
 void-elements@^2.0.1:
   version "2.0.1"
   resolved "http://registry.npm.taobao.org/void-elements/download/void-elements-2.0.1.tgz#c066afb582bb1cb4128d60ea92392e94d5e9dbec"
+
+vscode-css-languageservice@^3.0.12:
+  version "3.0.12"
+  resolved "http://registry.npm.taobao.org/vscode-css-languageservice/download/vscode-css-languageservice-3.0.12.tgz#fb4aac5ae3c5b761b1db1d7224b78ff824284dc3"
+  dependencies:
+    vscode-languageserver-types "^3.13.0"
+    vscode-nls "^4.0.0"
+
+vscode-emmet-helper@1.2.11:
+  version "1.2.11"
+  resolved "http://registry.npm.taobao.org/vscode-emmet-helper/download/vscode-emmet-helper-1.2.11.tgz#4de78223666bf917eb6dc4b225b6c40f6901950c"
+  dependencies:
+    "@emmetio/extract-abbreviation" "0.1.6"
+    jsonc-parser "^1.0.0"
+    vscode-languageserver-types "^3.6.0-next.1"
+
+vscode-languageserver-types@^3.13.0, vscode-languageserver-types@^3.6.0-next.1:
+  version "3.14.0"
+  resolved "http://registry.npm.taobao.org/vscode-languageserver-types/download/vscode-languageserver-types-3.14.0.tgz#d3b5952246d30e5241592b6dde8280e03942e743"
+
+vscode-nls@^4.0.0:
+  version "4.0.0"
+  resolved "http://registry.npm.taobao.org/vscode-nls/download/vscode-nls-4.0.0.tgz#4001c8a6caba5cedb23a9c5ce1090395c0e44002"
 
 w3c-hr-time@^1.0.1:
   version "1.0.1"

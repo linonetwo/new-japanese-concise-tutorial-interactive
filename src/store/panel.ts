@@ -11,6 +11,7 @@ export interface IPanelConfig {
     [tabID: string]: ITabConfig;
   };
   widthPx?: number;
+  currentTextID?: string | null;
 }
 export interface ITabConfig {
   textID: string;
@@ -39,11 +40,13 @@ export default createModel({
               tabID: newTabID,
             },
           },
+          currentTextID: textID,
         };
       } else {
         newPanelConfig = {
           tabIDs: [],
           tabs: {},
+          currentTextID: null,
         };
       }
       state.panels[newPanelID] = newPanelConfig;
@@ -57,11 +60,26 @@ export default createModel({
       state.panels[payload.panelID].tabIDs.push(payload.tabID);
       return state;
     },
-    closeTab(state: IState, payload: { panelID: string; tabID: string }) {
-      delete state.panels[payload.panelID].tabs[payload.tabID];
-      state.panels[payload.panelID].tabIDs = state.panels[
-        payload.panelID
-      ].tabIDs.filter(tabID => tabID !== payload.tabID);
+    loadTextToPanel(
+      state: IState,
+      payload: { panelID: string; textID: string },
+    ) {
+      state.panels[payload.panelID].currentTextID = payload.textID;
+      return state;
+    },
+    closeTab(
+      state: IState,
+      { panelID, tabID }: { panelID: string; tabID: string },
+    ) {
+      const { textID } = state.panels[panelID].tabs[tabID];
+      delete state.panels[panelID].tabs[tabID];
+      state.panels[panelID].tabIDs = state.panels[panelID].tabIDs.filter(
+        id => id !== tabID,
+      );
+      // clear current text if closed tab is previously focused tab
+      if (state.panels[panelID].currentTextID === textID) {
+        state.panels[panelID].currentTextID = null;
+      }
       return state;
     },
   },
@@ -90,6 +108,9 @@ export default createModel({
           tabConfig,
         });
       }
+
+      // load text into panel
+      this.loadTextToPanel(payload);
     },
   },
 });
