@@ -1,4 +1,5 @@
 import { createModel } from '@rematch/core';
+import { iRootState } from './';
 
 export interface IState {
   panelIDs: string[];
@@ -68,7 +69,7 @@ export default createModel({
     /**
      * open a new tab in a panel, and load a text with given ID into this tab
      */
-    newTab(state: IState, payload: { panelID?: string; textID: string }) {
+    newTab(payload: { panelID?: string; textID: string }, { panel: state }) {
       // initially there is no panel, so create one
       if (state.panelIDs.length === 0) {
         this.newPanel(payload.textID);
@@ -89,7 +90,6 @@ export default createModel({
           tabConfig,
         });
       }
-      return state;
     },
   },
 });

@@ -16,6 +16,7 @@
     "ordered-imports": false,
     "jsx-no-lambda": false,
     "jsx-no-multiline-js": false,
+    "no-nested-template-literals": false,
     "no-console": false
   }
 }

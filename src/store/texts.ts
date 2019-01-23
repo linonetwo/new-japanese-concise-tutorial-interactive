@@ -2,18 +2,38 @@ import { createModel } from '@rematch/core';
 
 export interface IState {
   textIDs: string[];
-  texts: { [textID: string]: string };
+  texts: { [textID: string]: IText };
+}
+export interface IText {
+  title: string;
+  brief: string;
+  text?: string;
+  textID: string;
 }
 
+const initialState: IState = {
+  textIDs: [],
+  texts: {},
+};
 export default createModel({
-  state: {
-    textIDs: [],
-    texts: {},
-  },
+  state: initialState,
   reducers: {
-    loadText(state: IState, { text, id }: { text: string; id: string }) {
-      state.textIDs.push(id);
-      state.texts[id] = text;
+    loadText(
+      state: IState,
+      payload: { title: string; brief: string; text: string; textID: string },
+    ) {
+      state.textIDs.push(payload.textID);
+      state.texts[payload.textID] = payload;
+      return state;
+    },
+    loadTextBook(
+      state: IState,
+      payload: Array<{ title: string; brief: string; textID: string }>,
+    ) {
+      for (const textBookChapter of payload) {
+        state.textIDs.push(textBookChapter.textID);
+        state.texts[textBookChapter.textID] = textBookChapter;
+      }
       return state;
     },
   },
@@ -21,10 +41,19 @@ export default createModel({
     /**
      * fetch text book from my SoLiD POD, and load them into rematch local cache one by one
      */
-    async fetchTextFromPOD(state: IState, textID: string) {
-      this.loadText({ id: textID, text: 'Loading...' });
+    async fetchTextFromPOD(textID: string) {
+      this.loadText({
+        textID,
+        title: '',
+        brief: 'Loading',
+        text: 'Loading...',
+      });
       await new Promise(resolve => setTimeout(resolve, 1000));
-      this.loadText({ id: textID, text: 'Loaded!' });
+      this.loadText({ textID, title: '', brief: 'Loaded!', text: 'Loaded!' });
+    },
+    async fetchTextBookFromPOD(textID: string) {
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      this.loadTextBook([{ title: 'string', brief: 'string;', textID: 'string' }]);
     },
   },
 });
