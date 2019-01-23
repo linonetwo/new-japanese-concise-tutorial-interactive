@@ -53,6 +53,9 @@
     "typescript": "3.2.4"
   },
   "rescripts": [
-    "env"
+    [
+      "use-babel-config",
+      ".babelrc.js"
+    ]
   ]
 }
