@@ -1,0 +1,21 @@
+{
+  "extends": [
+    "tslint:latest",
+    "tslint-config-prettier",
+    "tslint-react",
+    "tslint-immutable",
+    "tslint-sonarts",
+    "tslint-clean-code"
+  ],
+  "rules": {
+    "curly": [true],
+    "no-submodule-imports": [true, "rxjs", "react-i18next"],
+    "trailing-comma": [true, {"multiline": "always", "singleline": "never"}],
+    "quotemark": [true, "single", "jsx-double"],
+    "object-literal-sort-keys": false,
+    "ordered-imports": false,
+    "jsx-no-lambda": false,
+    "jsx-no-multiline-js": false,
+    "no-console": false
+  }
+}
