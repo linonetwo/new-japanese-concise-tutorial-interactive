@@ -2,12 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import store from './store';
-import './i18n';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
+import GlobalStyle from './GlobalStyles';
+import './i18n';
 
 ReactDOM.render(
   <Provider store={store}>
+    <GlobalStyle />
     <App />
   </Provider>,
   document.getElementById('root'),

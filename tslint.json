@@ -9,7 +9,7 @@
   ],
   "rules": {
     "curly": [true],
-    "no-submodule-imports": [true, "rxjs", "react-i18next"],
+    "no-submodule-imports": [true, "rxjs", "react-i18next", "react-icons"],
     "trailing-comma": [true, {"multiline": "always", "singleline": "never"}],
     "quotemark": [true, "single", "jsx-double"],
     "object-literal-sort-keys": false,

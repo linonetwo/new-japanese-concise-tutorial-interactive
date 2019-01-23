@@ -13,7 +13,8 @@ export interface IPanelConfig {
     [tabID: string]: ITabConfig;
   };
   widthPx?: number;
-  currentTextID?: string | null;
+  currentTabID: string | null;
+  currentTextID: string | null;
 }
 export interface ITabConfig {
   textID: string;
@@ -43,12 +44,14 @@ export default createModel({
             },
           },
           currentTextID: textID,
+          currentTabID: newTabID,
         };
       } else {
         newPanelConfig = {
           tabIDs: [],
           tabs: {},
           currentTextID: null,
+          currentTabID: null,
         };
       }
       state.panels[newPanelID] = newPanelConfig;
@@ -60,6 +63,7 @@ export default createModel({
     ) {
       state.panels[payload.panelID].tabs[payload.tabID] = payload.tabConfig;
       state.panels[payload.panelID].tabIDs.push(payload.tabID);
+      state.panels[payload.panelID].currentTabID = payload.tabID;
       return state;
     },
     loadTextToPanel(
@@ -67,6 +71,13 @@ export default createModel({
       payload: { panelID: string; textID: string },
     ) {
       state.panels[payload.panelID].currentTextID = payload.textID;
+      return state;
+    },
+    switchTab(
+      state: IState,
+      payload: { panelID: string; tabID: string },
+    ) {
+      state.panels[payload.panelID].currentTabID = payload.tabID;
       return state;
     },
     closeTab(
@@ -81,10 +92,12 @@ export default createModel({
       // clear current text if closed tab was last tab
       if (state.panels[panelID].currentTextID === textID) {
         state.panels[panelID].currentTextID = null;
+        state.panels[panelID].currentTabID = null;
       }
       // load text if there is a remaining tab
       const lastTabID = last(state.panels[panelID].tabIDs);
       if (lastTabID) {
+        state.panels[panelID].currentTabID = lastTabID;
         state.panels[panelID].currentTextID =
           state.panels[panelID].tabs[lastTabID].textID;
       }
