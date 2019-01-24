@@ -15,7 +15,7 @@ const context = {
       value: baseURI,
     },
   ],
-  // queryFormat: 'graphql',
+  queryFormat: 'graphql',
   '@context': mapValues(ldpContext, value => {
     const [prefix, suffix] = value.split(':');
     if (ldpContext[prefix]) {
@@ -85,14 +85,7 @@ export default createModel({
     },
     async fetchTextBookFromPOD() {
       const result = await comunicaEngine.query(
-        `
-            SELECT ?contains WHERE {
-              OPTIONAL {
-                _:b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/ldp#Container>;
-                  <http://www.w3.org/ns/ldp#contains> ?contains.
-              }
-            }
-            `,
+        `{ ... on Container {contains} }`,
         context,
       );
       (result as any).bindingsStream.on('data', data => {

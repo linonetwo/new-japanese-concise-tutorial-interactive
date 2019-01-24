@@ -820,9 +820,10 @@
     isomorphic-fetch "^2.2.1"
     parse-link-header "^1.0.1"
 
-"@comunica/actor-init-sparql@^1.5.2":
-  version "1.5.2"
-  resolved "http://registry.npm.taobao.org/@comunica/actor-init-sparql/download/@comunica/actor-init-sparql-1.5.2.tgz#d7ec27454edf48c2a3381a06ce2f285a55532e4e"
+"@comunica/actor-init-sparql@^1.5.3":
+  version "1.5.3"
+  resolved "http://registry.npm.taobao.org/@comunica/actor-init-sparql/download/@comunica/actor-init-sparql-1.5.3.tgz#e15091d5092e88dfa49c7f5bf88212508e6a4daa"
+  integrity sha1-4VCR1QkuiN+knH9b+IISUI5qTao=
   dependencies:
     "@comunica/actor-abstract-bindings-hash" "^1.4.4"
     "@comunica/actor-abstract-mediatyped" "^1.4.0"
@@ -880,8 +881,8 @@
     "@comunica/actor-rdf-source-identifier-file-content-type" "^1.5.1"
     "@comunica/actor-rdf-source-identifier-hypermedia-qpf" "^1.5.1"
     "@comunica/actor-rdf-source-identifier-sparql" "^1.5.1"
-    "@comunica/actor-sparql-parse-algebra" "^1.4.5"
-    "@comunica/actor-sparql-parse-graphql" "^1.4.3"
+    "@comunica/actor-sparql-parse-algebra" "^1.5.3"
+    "@comunica/actor-sparql-parse-graphql" "^1.5.3"
     "@comunica/actor-sparql-serialize-json" "^1.4.4"
     "@comunica/actor-sparql-serialize-rdf" "^1.4.4"
     "@comunica/actor-sparql-serialize-simple" "^1.4.4"
@@ -1276,17 +1277,19 @@
   version "1.5.1"
   resolved "http://registry.npm.taobao.org/@comunica/actor-rdf-source-identifier-sparql/download/@comunica/actor-rdf-source-identifier-sparql-1.5.1.tgz#572b1e937ff3de43563fa86564f2d4aa87a2b970"
 
-"@comunica/actor-sparql-parse-algebra@^1.4.5":
-  version "1.4.5"
-  resolved "http://registry.npm.taobao.org/@comunica/actor-sparql-parse-algebra/download/@comunica/actor-sparql-parse-algebra-1.4.5.tgz#ef92177913a666fae156cd480404844875142ffb"
+"@comunica/actor-sparql-parse-algebra@^1.5.3":
+  version "1.5.3"
+  resolved "http://registry.npm.taobao.org/@comunica/actor-sparql-parse-algebra/download/@comunica/actor-sparql-parse-algebra-1.5.3.tgz#b4031aa486d9ef4a393a6ca2d9bfe353a79638fa"
+  integrity sha1-tAMapIbZ70o5Omyi2b/jU6eWOPo=
   dependencies:
     sparqlalgebrajs "^1.4.0"
 
-"@comunica/actor-sparql-parse-graphql@^1.4.3":
-  version "1.4.3"
-  resolved "http://registry.npm.taobao.org/@comunica/actor-sparql-parse-graphql/download/@comunica/actor-sparql-parse-graphql-1.4.3.tgz#c19e93ccd8c3d8d8cec0b49c1a331a43fa9fbc15"
+"@comunica/actor-sparql-parse-graphql@^1.5.3":
+  version "1.5.3"
+  resolved "http://registry.npm.taobao.org/@comunica/actor-sparql-parse-graphql/download/@comunica/actor-sparql-parse-graphql-1.5.3.tgz#49b2dbb80a0a4b38a6b0d5facfcba7f6914adfe1"
+  integrity sha1-SbLbuAoKSzimsNX6z8un9pFK3+E=
   dependencies:
-    graphql-to-sparql "^1.4.1"
+    graphql-to-sparql "^1.5.0"
 
 "@comunica/actor-sparql-serialize-json@^1.4.4":
   version "1.4.4"
@@ -4697,15 +4700,16 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.6
   version "4.1.15"
   resolved "http://registry.npm.taobao.org/graceful-fs/download/graceful-fs-4.1.15.tgz#ffb703e1066e8a0eeaa4c8b80ba9253eeefbfb00"
 
-graphql-to-sparql@^1.4.1:
-  version "1.4.1"
-  resolved "http://registry.npm.taobao.org/graphql-to-sparql/download/graphql-to-sparql-1.4.1.tgz#947bf8fa01211cbc7a418f97d49e71e6e17d69f9"
+graphql-to-sparql@^1.5.0:
+  version "1.5.0"
+  resolved "http://registry.npm.taobao.org/graphql-to-sparql/download/graphql-to-sparql-1.5.0.tgz#a3905e8238f90cdf9ffdd977d4738da43883471d"
+  integrity sha1-o5Begjj5DN+f/dl31HONpDiDRx0=
   dependencies:
     "@rdfjs/data-model" "^1.1.1"
     "@types/rdf-js" "^2.0.1"
     graphql "^14.0.0"
     minimist "^1.2.0"
-    sparqlalgebrajs "^1.3.1"
+    sparqlalgebrajs "^1.4.2"
 
 graphql@^14.0.0:
   version "14.1.1"
@@ -5026,9 +5030,10 @@ i18next-browser-languagedetector@^2.2.4:
   version "2.2.4"
   resolved "http://registry.npm.taobao.org/i18next-browser-languagedetector/download/i18next-browser-languagedetector-2.2.4.tgz#b02412d7ab15d7d74e1b1317d67d8a244b219ee3"
 
-i18next@^13.1.5:
-  version "13.1.5"
-  resolved "http://registry.npm.taobao.org/i18next/download/i18next-13.1.5.tgz#b1fbc35e00047e6f580288f6774b21b5d42649e6"
+i18next@^14.0.0:
+  version "14.0.0"
+  resolved "http://registry.npm.taobao.org/i18next/download/i18next-14.0.0.tgz#8f0be07c0de9db09081ed7d98e8f04112c8c15c9"
+  integrity sha1-jwvgfA3p2wkIHtfZjo8EESyMFck=
 
 iconv-lite@0.4.23:
   version "0.4.23"
@@ -9082,7 +9087,7 @@ source-map@^0.6.0, source-map@^0.6.1, source-map@~0.6.0, source-map@~0.6.1:
   version "0.6.1"
   resolved "http://registry.npm.taobao.org/source-map/download/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
 
-sparqlalgebrajs@^1.1.0, sparqlalgebrajs@^1.3.1, sparqlalgebrajs@^1.4.0:
+sparqlalgebrajs@^1.1.0, sparqlalgebrajs@^1.4.0, sparqlalgebrajs@^1.4.2:
   version "1.4.2"
   resolved "http://registry.npm.taobao.org/sparqlalgebrajs/download/sparqlalgebrajs-1.4.2.tgz#bd91294d9a923310a412e8cd837bf0f93173dacb"
   dependencies:
