@@ -4,6 +4,9 @@
   "builds": [
       { "src": "package.json", "use": "@now/static-build" }
   ],
+  "env": {
+    "YARN_REGISTRY": "https://registry.yarnpkg.com"
+  },
   "routes": [
       {"src": "^/static/(.*)", "dest": "/static/$1"},
       {"src": "^/favicon.ico", "dest": "/favicon.ico"},
