@@ -25,6 +25,7 @@
   "scripts": {
     "start": "rescripts start",
     "build": "rescripts build",
+    "now-build": "npm run build && mv build dist",
     "test": "rescripts test"
   },
   "eslintConfig": {
