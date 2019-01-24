@@ -79,7 +79,7 @@ export default createModel({
       this.loadText({
         textID,
         title: text.split('\n')[0],
-        brief: text.substring(0, 50),
+        brief: text.substring(0, 20),
         text,
       });
     },
