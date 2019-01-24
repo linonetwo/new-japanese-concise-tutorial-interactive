@@ -1,5 +1,29 @@
 import { createModel } from '@rematch/core';
-import { find, omit, uniq } from 'lodash';
+import { find, omit, uniq, mapValues } from 'lodash';
+import { newEngine } from '@comunica/actor-init-sparql';
+import { bindingsStreamToGraphQl } from '@comunica/actor-sparql-serialize-tree';
+
+import ldpContext from './ldpContext.json';
+
+const baseURI =
+  'https://new-japanese-concise-tutorial.solid.authing.cn/public/textbook/';
+const comunicaEngine = newEngine();
+const context = {
+  sources: [
+    {
+      type: 'file',
+      value: baseURI,
+    },
+  ],
+  // queryFormat: 'graphql',
+  '@context': mapValues(ldpContext, value => {
+    const [prefix, suffix] = value.split(':');
+    if (ldpContext[prefix]) {
+      return ldpContext[prefix] + suffix;
+    }
+    return value;
+  }),
+};
 
 export interface IState {
   textIDs: string[];
@@ -51,19 +75,33 @@ export default createModel({
         brief: 'Loading',
         text: 'Loading...',
       });
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      const text = find(await import('./text.example.json'), [
-        'textID',
+      const text = await fetch(textID).then(res => res.text());
+      this.loadText({
         textID,
-      ]);
-      this.loadText(text);
+        title: text.split('\n')[0],
+        brief: text.substring(0, 50),
+        text,
+      });
     },
-    async fetchTextBookFromPOD(textID: string) {
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      const textList = (await import('./text.example.json')).default.map(obj =>
-        omit(obj, ['text']),
+    async fetchTextBookFromPOD() {
+      const result = await comunicaEngine.query(
+        `
+            SELECT ?contains WHERE {
+              OPTIONAL {
+                _:b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/ldp#Container>;
+                  <http://www.w3.org/ns/ldp#contains> ?contains.
+              }
+            }
+            `,
+        context,
       );
-      this.loadTextBook(textList);
+      (result as any).bindingsStream.on('data', data => {
+        const {
+          '?contains': { id: textID },
+        } = data.toObject();
+        const title = textID.replace(baseURI, '');
+        this.loadTextBook([{ title, textID, brief: '' }]);
+      });
     },
   },
 });

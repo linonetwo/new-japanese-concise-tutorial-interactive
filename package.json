@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@comunica/actor-init-sparql": "^1.5.2",
+    "@comunica/actor-sparql-serialize-tree": "^1.4.4",
     "@rematch/core": "^1.0.6",
     "@rematch/immer": "^1.1.0",
     "i18next": "^13.1.5",
