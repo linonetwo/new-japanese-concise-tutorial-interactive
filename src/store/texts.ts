@@ -88,14 +88,25 @@ export default createModel({
         `{ ... on Container {contains} }`,
         context,
       );
-      (result as any).bindingsStream.on('data', data => {
-        const {
-          '?contains': { id: textID },
-        } = data.toObject();
-        const title = textID.replace(baseURI, '');
-        this.loadTextBook([{ title, textID, brief: '' }]);
-        // automation
-        import('./').then(({ dispatch }) => dispatch.panel.newTab({ textID }))
+      return new Promise(resolve => {
+        let first = true;
+        (result as any).bindingsStream.on('data', data => {
+          const {
+            '?contains': { id: textID },
+          } = data.toObject();
+          const title = textID.replace(baseURI, '');
+          this.loadTextBook([{ title, textID, brief: '' }]);
+          // automation
+          if (first) {
+            import('./').then(({ dispatch }) =>
+              dispatch.panel.newTab({ textID }),
+            );
+            first = false;
+          }
+        });
+        (result as any).bindingsStream.on('end', data => {
+          resolve();
+        });
       });
     },
   },
