@@ -35,7 +35,9 @@ export default function MarkIntellisense(): Plugin {
               if (!marksString) {
                 return;
               }
-              const mark: MarkJSON & { data: IToolTipProps } = JSON.parse(marksString);
+              const mark: MarkJSON & { data: IToolTipProps } = JSON.parse(
+                marksString,
+              );
               return <ToolTipContent {...mark.data} />;
             }}
           />
@@ -48,7 +50,7 @@ export default function MarkIntellisense(): Plugin {
         <IntellisenseMark
           data-tip={JSON.stringify(mark)}
           data-for="slate-mark-intellisense"
-          onMouseEnter={Tooltip.rebuild}
+          onMouseOverCapture={Tooltip.rebuild}
           {...attributes}
         >
           {children}
