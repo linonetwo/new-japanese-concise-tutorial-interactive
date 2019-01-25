@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
-import styled, { css } from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { connect } from 'react-redux';
 import { isNot } from 'styled-is';
 import { iRootState, Dispatch } from './store';
 
+const rotate90 = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+`;
 const buttonRadius = 40;
-const ToggleMenu = styled.button`
+const ToggleMenu = styled.button<{ opened?: boolean }>`
   border-radius: ${buttonRadius}px;
   width: ${buttonRadius}px;
   height: ${buttonRadius}px;
@@ -15,6 +23,9 @@ const ToggleMenu = styled.button`
   z-index: 3;
   &:hover {
     opacity: 1;
+    ${isNot('opened')`
+      animation: ${rotate90} 0.5s forwards;
+    `}
   }
   cursor: pointer;
 
@@ -66,7 +77,9 @@ class Menu extends Component<ConnectedProps> {
   public render() {
     return (
       <>
-        <ToggleMenu onClick={this.toggleMenu}>三</ToggleMenu>
+        <ToggleMenu opened={this.state.opened} onClick={this.toggleMenu}>
+          {this.state.opened ? '川' : '三'}
+        </ToggleMenu>
         <MenuContainer opened={this.state.opened} onClick={this.toggleMenu}>
           {this.props.titles.map(({ title, brief, textID }) => (
             <MenuItem
