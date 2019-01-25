@@ -13,11 +13,9 @@ import MarkParsed from './slate-mark-parsed';
 import MarkIntellisense from './slate-mark-intellisense';
 
 const plugins: Plugin[] = [MarkIntellisense()];
-// set up japanese dict https://github.com/azu/nlp-pattern-match/issues/5
-(window as any).kuromojin = { dicPath: '/dict' };
-const japaneseParse = new JapaneseParser();
-japaneseParse.ready().then(() => {
-  plugins.push(MarkParsed({ parser: japaneseParse }));
+const japaneseParser = new JapaneseParser({ dicPath: '/dict' });
+japaneseParser.ready().then(() => {
+  plugins.push(MarkParsed({ parser: japaneseParser }));
 });
 
 const Container = styled.div``;

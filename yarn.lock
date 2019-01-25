@@ -1724,9 +1724,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-redux@^7.0.0":
-  version "7.0.0"
-  resolved "http://registry.npm.taobao.org/@types/react-redux/download/@types/react-redux-7.0.0.tgz#8aaba50fb43739462c40e65e85f96eb8a550d494"
+"@types/react-redux@^7.0.1":
+  version "7.0.1"
+  resolved "http://registry.npm.taobao.org/@types/react-redux/download/@types/react-redux-7.0.1.tgz#9dd2503be7a9861c5a092bf1c5050b7ade4dc62e"
+  integrity sha1-ndJQO+ephhxaCSvxxQULet5Nxi4=
   dependencies:
     "@types/react" "*"
     redux "^4.0.0"
@@ -5150,10 +5151,10 @@ i18next-browser-languagedetector@^2.2.4:
   version "2.2.4"
   resolved "http://registry.npm.taobao.org/i18next-browser-languagedetector/download/i18next-browser-languagedetector-2.2.4.tgz#b02412d7ab15d7d74e1b1317d67d8a244b219ee3"
 
-i18next@^14.0.0:
-  version "14.0.0"
-  resolved "http://registry.npm.taobao.org/i18next/download/i18next-14.0.0.tgz#8f0be07c0de9db09081ed7d98e8f04112c8c15c9"
-  integrity sha1-jwvgfA3p2wkIHtfZjo8EESyMFck=
+i18next@^14.0.1:
+  version "14.0.1"
+  resolved "http://registry.npm.taobao.org/i18next/download/i18next-14.0.1.tgz#c5f0292ea6389394b6056f597b75f1f9aa03124f"
+  integrity sha1-xfApLqY4k5S2BW9Ze3Xx+aoDEk8=
 
 iconv-lite@0.4.23:
   version "0.4.23"
@@ -6882,10 +6883,10 @@ nice-try@^1.0.4:
   version "1.0.5"
   resolved "http://registry.npm.taobao.org/nice-try/download/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
 
-nlcst-parse-japanese@^1.1.3:
-  version "1.1.3"
-  resolved "http://registry.npm.taobao.org/nlcst-parse-japanese/download/nlcst-parse-japanese-1.1.3.tgz#4f9a67790febae7213d38f949370b31980266200"
-  integrity sha1-T5pneQ/rrnIT04+Uk3CzGYAmYgA=
+nlcst-parse-japanese@^1.2.0:
+  version "1.2.0"
+  resolved "http://registry.npm.taobao.org/nlcst-parse-japanese/download/nlcst-parse-japanese-1.2.0.tgz#e160741efcda8a6dd7b961e3d342699dc600edf1"
+  integrity sha1-4WB0Hvzaim3XuWHj00JpncYA7fE=
   dependencies:
     kuromojin "^1.4.0"
     nlcst-types "^1.2.2"
@@ -8356,9 +8357,10 @@ react-error-overlay@^5.1.2:
   version "5.1.2"
   resolved "http://registry.npm.taobao.org/react-error-overlay/download/react-error-overlay-5.1.2.tgz#888957b884d4b25b083a82ad550f7aad96585394"
 
-react-i18next@^9.0.7:
-  version "9.0.7"
-  resolved "http://registry.npm.taobao.org/react-i18next/download/react-i18next-9.0.7.tgz#437ea02e5771c992502be1c7b1101d16048e3177"
+react-i18next@^9.0.8:
+  version "9.0.8"
+  resolved "http://registry.npm.taobao.org/react-i18next/download/react-i18next-9.0.8.tgz#a77561641f23c86bd81a68bb2464c5e78b02c04b"
+  integrity sha1-p3VhZB8jyGvYGmi7JGTF54sCwEs=
   dependencies:
     "@babel/runtime" "^7.3.1"
     hoist-non-react-statics "3.2.1"
