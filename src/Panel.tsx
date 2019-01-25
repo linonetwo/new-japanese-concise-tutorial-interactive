@@ -1,13 +1,24 @@
 import React, { FunctionComponent } from 'react';
 import styled from 'styled-components';
 import is from 'styled-is';
-import { Editor } from 'slate-react';
+import { Editor, Plugin } from 'slate-react';
 import { Value } from 'slate';
 import Plain from 'slate-plain-serializer';
 import { connect } from 'react-redux';
 import { FaTimes } from 'react-icons/fa';
+import { JapaneseParser } from 'nlcst-parse-japanese';
 
 import { iRootState, Dispatch } from './store';
+import MarkParsed from './slate-mark-parsed';
+import MarkIntellisense from './slate-mark-intellisense';
+
+const plugins: Plugin[] = [MarkIntellisense()];
+// set up japanese dict https://github.com/azu/nlp-pattern-match/issues/5
+(window as any).kuromojin = { dicPath: '/dict' };
+const japaneseParse = new JapaneseParser();
+japaneseParse.ready().then(() => {
+  plugins.push(MarkParsed({ parser: japaneseParse }));
+});
 
 const Container = styled.div``;
 const TabBar = styled.nav`
@@ -84,7 +95,7 @@ const Panel: FunctionComponent<ConnectedProps> = ({
         ))}
       </TabBar>
       <EditorContainer>
-        <Editor value={Plain.deserialize(text)} />
+        <Editor value={Plain.deserialize(text)} plugins={plugins} />
       </EditorContainer>
     </Container>
   );

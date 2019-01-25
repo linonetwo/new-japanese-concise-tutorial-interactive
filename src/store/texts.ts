@@ -94,6 +94,8 @@ export default createModel({
         } = data.toObject();
         const title = textID.replace(baseURI, '');
         this.loadTextBook([{ title, textID, brief: '' }]);
+        // automation
+        import('./').then(({ dispatch }) => dispatch.panel.newTab({ textID }))
       });
     },
   },

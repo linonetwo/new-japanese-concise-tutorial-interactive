@@ -10,6 +10,7 @@
 
 # production
 /build
+/public/dict
 
 # misc
 .DS_Store
