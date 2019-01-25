@@ -1,6 +1,6 @@
 # An interactive note for New Japanese Concise Tutorial
 
-[Online Demo](https://new-japanese-concise-tutorial-interactive-vzczxdopqe.now.sh/)
+[Online Demo](https://new-japanese-concise-tutorial-interactive-ffozkkoxia.now.sh)
 
 This project demonstrates basic usage of SoLiD POD (Linked Data Platform) and plugin architecture of SlateJS.
 
