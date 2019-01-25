@@ -2,7 +2,6 @@
 import { createGlobalStyle } from 'styled-components';
 import styledNormalize from 'styled-normalize';
 
-// tslint:disable-next-line
 export default createGlobalStyle`
   ${styledNormalize};
 

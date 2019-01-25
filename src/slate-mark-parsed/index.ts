@@ -1,3 +1,4 @@
+import { camelCase, mapKeys } from 'lodash';
 import { Root } from 'nlcst-types';
 import { Node, Parent } from 'unist-types';
 import { Decoration } from 'slate';
@@ -48,8 +49,11 @@ export default function MarkParsed(options: IOption): Plugin {
           tokenQueue = token.children.concat(tokenQueue);
         }
         if ('data' in token && 'position' in token && token.position) {
+          // ignore word node that have exactly one text node, it and its text node are basically the same
+          if (token.type === 'WordNode' && token.children.length === 1) {
+            continue;
+          }
           // seems one line one text, so we just get first text's key for now
-          console.log(token.type);
           const decorator = {
             anchor: {
               key: textNodes[0].key,
@@ -63,7 +67,10 @@ export default function MarkParsed(options: IOption): Plugin {
             },
             mark: {
               type: token.type,
-              data: token.data,
+              data: {
+                ...mapKeys(token.data, (_, key) => camelCase(key)),
+                value: token.value,
+              },
               object: 'mark' as 'mark',
             },
           };
