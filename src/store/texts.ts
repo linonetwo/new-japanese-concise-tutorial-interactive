@@ -1,9 +1,10 @@
 import { createModel } from '@rematch/core';
-import { find, omit, uniq, mapValues } from 'lodash';
+import { find, omit, uniq, mapValues, last } from 'lodash';
 import { newEngine } from '@comunica/actor-init-sparql';
 import { bindingsStreamToGraphQl } from '@comunica/actor-sparql-serialize-tree';
 
 import ldpContext from './ldpContext.json';
+import store from './index';
 
 const baseURI =
   'https://new-japanese-concise-tutorial.solid.authing.cn/public/textbook/';
@@ -89,22 +90,18 @@ export default createModel({
         context,
       );
       return new Promise(resolve => {
-        let first = true;
         (result as any).bindingsStream.on('data', data => {
           const {
             '?contains': { id: textID },
           } = data.toObject();
           const title = textID.replace(baseURI, '');
           this.loadTextBook([{ title, textID, brief: '' }]);
-          // automation
-          if (first) {
-            import('./').then(({ dispatch }) =>
-              dispatch.panel.newTab({ textID }),
-            );
-            first = false;
-          }
         });
-        (result as any).bindingsStream.on('end', data => {
+        (result as any).bindingsStream.on('end', async () => {
+          // automation
+          const { dispatch, getState } = await import('./');
+          const textID = last(getState().texts.textIDs);
+          dispatch.panel.newTab({ textID });
           resolve();
         });
       });

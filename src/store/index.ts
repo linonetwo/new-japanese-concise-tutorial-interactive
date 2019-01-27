@@ -15,7 +15,7 @@ const store = init({
 });
 
 export default store;
-export const { dispatch } = store;
+export const { dispatch, getState } = store;
 
 export type Store = typeof store;
 export type Dispatch = typeof store.dispatch;
