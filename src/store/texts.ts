@@ -35,6 +35,7 @@ export interface IText {
   brief: string;
   text?: string;
   textID: string;
+  contentType?: string;
 }
 
 const initialState: IState = {
@@ -76,12 +77,15 @@ export default createModel({
         brief: 'Loading',
         text: 'Loading...',
       });
-      const text = await fetch(textID).then(res => res.text());
+      const response = await fetch(textID);
+      const contentType = response.headers.get('content-type')
+      const text = await response.text();
       this.loadText({
         textID,
         title: text.split('\n')[0],
         brief: text.substring(0, 20),
         text,
+        contentType,
       });
     },
     async fetchTextBookFromPOD() {
