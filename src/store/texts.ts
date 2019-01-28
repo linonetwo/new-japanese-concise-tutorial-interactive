@@ -6,6 +6,23 @@ import { bindingsStreamToGraphQl } from '@comunica/actor-sparql-serialize-tree';
 import ldpContext from './ldpContext.json';
 import store from './index';
 
+function expandContext(contextObj: Object, parent: Object = contextObj) {
+  return mapValues(contextObj, (value: string | boolean | Object) => {
+    if (typeof value === 'object') {
+      return expandContext(value, parent);
+    }
+    if (typeof value === 'string') {
+      const [prefix, suffix] = value.split(':');
+      if (parent[prefix]) {
+        return parent[prefix] + suffix;
+      }
+      return value;
+    }
+    return value;
+  });
+}
+// console.log(JSON.stringify(expandContext(ldpContext)));
+
 const baseURI =
   'https://new-japanese-concise-tutorial.solid.authing.cn/public/textbook/';
 const comunicaEngine = newEngine();
@@ -17,13 +34,7 @@ const context = {
     },
   ],
   queryFormat: 'graphql',
-  '@context': mapValues(ldpContext, value => {
-    const [prefix, suffix] = value.split(':');
-    if (ldpContext[prefix]) {
-      return ldpContext[prefix] + suffix;
-    }
-    return value;
-  }),
+  '@context': expandContext(ldpContext),
 };
 
 export interface IState {
