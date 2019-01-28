@@ -1,5 +1,5 @@
 import { createModel } from '@rematch/core';
-import { find, omit, uniq, mapValues, last } from 'lodash';
+import { find, merge, omit, uniq, mapValues, last } from 'lodash';
 import { newEngine } from '@comunica/actor-init-sparql';
 import { bindingsStreamToGraphQl } from '@comunica/actor-sparql-serialize-tree';
 
@@ -38,19 +38,19 @@ const context = {
 };
 
 export interface IState {
-  textIDs: string[];
-  texts: { [textID: string]: IText };
+  textURIs: string[];
+  texts: { [textURI: string]: IText };
 }
 export interface IText {
   title: string;
   brief: string;
   text?: string;
-  textID: string;
+  textURI: string;
   contentType?: string;
 }
 
 const initialState: IState = {
-  textIDs: [],
+  textURIs: [],
   texts: {},
 };
 export default createModel({
@@ -58,22 +58,25 @@ export default createModel({
   reducers: {
     loadText(
       state: IState,
-      payload: { title: string; brief: string; text: string; textID: string },
+      payload: { title: string; brief: string; text: string; textURI: string },
     ) {
-      state.textIDs.push(payload.textID);
-      state.textIDs = uniq(state.textIDs);
-      state.texts[payload.textID] = payload;
+      state.textURIs.push(payload.textURI);
+      state.textURIs = uniq(state.textURIs);
+      state.texts[payload.textURI] = payload;
       return state;
     },
     loadTextBook(
       state: IState,
-      payload: Array<{ title: string; brief: string; textID: string }>,
+      payload: Array<{ title: string; brief: string; textURI: string }>,
     ) {
       for (const textBookChapter of payload) {
-        state.textIDs.push(textBookChapter.textID);
-        state.texts[textBookChapter.textID] = textBookChapter;
+        state.textURIs.push(textBookChapter.textURI);
+        state.texts[textBookChapter.textURI] = merge(
+          { ...state.texts[textBookChapter.textURI] },
+          textBookChapter,
+        );
       }
-      state.textIDs = uniq(state.textIDs);
+      state.textURIs = uniq(state.textURIs);
       return state;
     },
   },
@@ -81,18 +84,18 @@ export default createModel({
     /**
      * fetch text book from my SoLiD POD, and load them into rematch local cache one by one
      */
-    async fetchTextFromPOD(textID: string) {
+    async fetchTextFromPOD(textURI: string) {
       this.loadText({
-        textID,
+        textURI,
         title: '',
         brief: 'Loading',
         text: 'Loading...',
       });
-      const response = await fetch(textID);
-      const contentType = response.headers.get('content-type')
+      const response = await fetch(textURI);
+      const contentType = response.headers.get('content-type');
       const text = await response.text();
       this.loadText({
-        textID,
+        textURI,
         title: text.split('\n')[0],
         brief: text.substring(0, 20),
         text,
@@ -101,22 +104,29 @@ export default createModel({
     },
     async fetchTextBookFromPOD() {
       const result = await comunicaEngine.query(
-        `{ ... on Container {contains} }`,
+        `{ ... on Container { contains contains { type } } }`,
         context,
       );
       return new Promise(resolve => {
         (result as any).bindingsStream.on('data', data => {
           const {
-            '?contains': { id: textID },
+            '?contains': { id: textURI },
+            '?contains_type': { id: containsType },
           } = data.toObject();
-          const title = textID.replace(baseURI, '');
-          this.loadTextBook([{ title, textID, brief: '' }]);
+          console.log(data.toObject());
+          const title = textURI.replace(baseURI, '');
+          const getContentType = /http:\/\/www.w3.org\/ns\/iana\/media-types\/(.+)#/;
+          const [, contentType] = containsType.match(getContentType) || [
+            undefined,
+            undefined,
+          ];
+          this.loadTextBook([{ title, textURI, brief: '', contentType }]);
         });
         (result as any).bindingsStream.on('end', async () => {
           // automation
           const { dispatch, getState } = await import('./');
-          const textID = last(getState().texts.textIDs);
-          dispatch.panel.newTab({ textID });
+          const textURI = last(getState().texts.textURIs);
+          dispatch.panel.newTab({ textURI });
           resolve();
         });
       });

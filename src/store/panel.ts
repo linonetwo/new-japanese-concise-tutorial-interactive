@@ -14,10 +14,10 @@ export interface IPanelConfig {
   };
   widthPx?: number;
   currentTabID: string | null;
-  currentTextID: string | null;
+  currenttextURI: string | null;
 }
 export interface ITabConfig {
-  textID: string;
+  textURI: string;
   tabID: string;
 }
 
@@ -28,29 +28,29 @@ const initialState: IState = {
 export default createModel({
   state: initialState,
   reducers: {
-    newPanel(state: IState, textID?: string) {
+    newPanel(state: IState, textURI?: string) {
       const newPanelID = String(Math.random());
       const newTabID = String(Math.random());
       state.panelIDs.push(newPanelID);
-      // if given a textID, open it in a new tab in this panel
+      // if given a textURI, open it in a new tab in this panel
       let newPanelConfig: IPanelConfig;
-      if (textID) {
+      if (textURI) {
         newPanelConfig = {
           tabIDs: [newTabID],
           tabs: {
             [newTabID]: {
-              textID,
+              textURI,
               tabID: newTabID,
             },
           },
-          currentTextID: textID,
+          currenttextURI: textURI,
           currentTabID: newTabID,
         };
       } else {
         newPanelConfig = {
           tabIDs: [],
           tabs: {},
-          currentTextID: null,
+          currenttextURI: null,
           currentTabID: null,
         };
       }
@@ -68,9 +68,9 @@ export default createModel({
     },
     loadTextToPanel(
       state: IState,
-      payload: { panelID: string; textID: string },
+      payload: { panelID: string; textURI: string },
     ) {
-      state.panels[payload.panelID].currentTextID = payload.textID;
+      state.panels[payload.panelID].currenttextURI = payload.textURI;
       return state;
     },
     switchTab(
@@ -84,22 +84,22 @@ export default createModel({
       state: IState,
       { panelID, tabID }: { panelID: string; tabID: string },
     ) {
-      const { textID } = state.panels[panelID].tabs[tabID];
+      const { textURI } = state.panels[panelID].tabs[tabID];
       delete state.panels[panelID].tabs[tabID];
       state.panels[panelID].tabIDs = state.panels[panelID].tabIDs.filter(
         id => id !== tabID,
       );
       // clear current text if closed tab was last tab
-      if (state.panels[panelID].currentTextID === textID) {
-        state.panels[panelID].currentTextID = null;
+      if (state.panels[panelID].currenttextURI === textURI) {
+        state.panels[panelID].currenttextURI = null;
         state.panels[panelID].currentTabID = null;
       }
       // load text if there is a remaining tab
       const lastTabID = last(state.panels[panelID].tabIDs);
       if (lastTabID) {
         state.panels[panelID].currentTabID = lastTabID;
-        state.panels[panelID].currentTextID =
-          state.panels[panelID].tabs[lastTabID].textID;
+        state.panels[panelID].currenttextURI =
+          state.panels[panelID].tabs[lastTabID].textURI;
       }
       return state;
     },
@@ -109,12 +109,12 @@ export default createModel({
      * open a new tab in a panel, and load a text with given ID into this tab
      */
     async newTab(
-      payload: { panelID?: string; textID: string },
+      payload: { panelID?: string; textURI: string },
       { panel: state },
     ) {
       // initially there is no panel, so create one
       if (state.panelIDs.length === 0) {
-        this.newPanel(payload.textID);
+        this.newPanel(payload.textURI);
         const newPanelIDs = (await import('./')).default.getState().panel
           .panelIDs[0];
         this.loadTextToNewTabOfPanel({
@@ -129,7 +129,7 @@ export default createModel({
         }
         const newTabID = String(Math.random());
         const tabConfig: ITabConfig = {
-          textID: payload.textID,
+          textURI: payload.textURI,
           tabID: newTabID,
         };
         this.addTabToPanel({
@@ -142,12 +142,12 @@ export default createModel({
     },
     async loadTextToNewTabOfPanel(payload: {
       panelID: string;
-      textID: string;
+      textURI: string;
     }) {
       // load text into panel
       this.loadTextToPanel(payload);
       const { dispatch } = await import('./');
-      dispatch.texts.fetchTextFromPOD(payload.textID);
+      dispatch.texts.fetchTextFromPOD(payload.textURI);
     },
   },
 });

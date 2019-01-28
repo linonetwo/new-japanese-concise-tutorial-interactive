@@ -81,10 +81,10 @@ class Menu extends Component<ConnectedProps> {
           {this.state.opened ? '川' : '三'}
         </ToggleMenu>
         <MenuContainer opened={this.state.opened} onClick={this.toggleMenu}>
-          {this.props.titles.map(({ title, brief, textID }) => (
+          {this.props.titles.map(({ title, brief, textURI }) => (
             <MenuItem
-              key={textID}
-              onClick={() => this.props.newTab({ textID })}
+              key={textURI}
+              onClick={() => this.props.newTab({ textURI })}
             >
               <h3>{title}</h3>
               <div>{brief}</div>
@@ -96,8 +96,8 @@ class Menu extends Component<ConnectedProps> {
   }
 }
 
-const mapState = ({ texts: { textIDs, texts } }: iRootState) => ({
-  titles: textIDs.map(id => texts[id]),
+const mapState = ({ texts: { textURIs, texts } }: iRootState) => ({
+  titles: textURIs.map(id => texts[id]),
 });
 const mapDispatch = ({ panel: { newTab } }: Dispatch) => ({
   newTab,

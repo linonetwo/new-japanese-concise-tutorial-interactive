@@ -71,13 +71,13 @@ const Panel: FunctionComponent<ConnectedProps> = ({
   return (
     <Container>
       <TabBar>
-        {tabs.map(({ tabID, title, textID }) => (
+        {tabs.map(({ tabID, title, textURI }) => (
           <Tab
             key={tabID}
             focused={tabID === currentTabID}
             onClick={() => {
               switchTab({ panelID: id, tabID });
-              loadTextToPanel({ panelID: id, textID });
+              loadTextToPanel({ panelID: id, textURI });
             }}
           >
             <span>{title}</span>
@@ -108,13 +108,13 @@ const mapState = (
     currentTabID: currentPanel.currentTabID,
     tabs: currentPanel.tabIDs
       .map(id => currentPanel.tabs[id])
-      .map(({ textID, ...rest }) => ({
-        title: texts[textID].title,
-        textID,
+      .map(({ textURI, ...rest }) => ({
+        title: texts[textURI].title,
+        textURI,
         ...rest,
       })),
     text:
-      (currentPanel.currentTextID && texts[currentPanel.currentTextID].text) ||
+      (currentPanel.currenttextURI && texts[currentPanel.currenttextURI].text) ||
       '',
   };
 };
