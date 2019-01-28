@@ -100,7 +100,8 @@
 
   "inbox":              "ldp:inbox",
   "inboxes":            "ldp:inbox",
-  "contains":           "ldp:contains",
+  "contains":           { "@id": "ldp:contains", "@singular": true },
+  "contains_type":      { "@singular": false },
   "Resource":           "ldp:Resource",
   "Container":          "ldp:Container",
 
@@ -110,7 +111,8 @@
 
   "type":               "rdf:type",
   "types":              "rdf:type",
-  "a":                  "a",
+  "a":                  "rdf:type",
+  "id":                 "rdf:id",
 
   "comment":            "rdfs:comment",
   "comments":           "rdfs:comment",
