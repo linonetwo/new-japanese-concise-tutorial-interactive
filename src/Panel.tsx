@@ -93,7 +93,7 @@ const Panel: FunctionComponent<ConnectedProps> = ({
         ))}
       </TabBar>
       <EditorContainer>
-        <Editor value={Plain.deserialize(text)} plugins={plugins} />
+        <Editor value={Plain.deserialize(text)} plugins={plugins} spellCheck={false} />
       </EditorContainer>
     </Container>
   );
