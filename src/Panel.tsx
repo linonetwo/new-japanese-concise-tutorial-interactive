@@ -10,9 +10,9 @@ import { JapaneseParser } from 'nlcst-parse-japanese';
 
 import { iRootState, Dispatch } from './store';
 import MarkParsed from './slate-mark-parsed';
-import MarkIntellisense from './slate-mark-intellisense';
+import MarkToolTip from './slate-mark-tooltip';
 
-const plugins: Plugin[] = [MarkIntellisense()];
+const plugins: Plugin[] = [MarkToolTip()];
 const japaneseParser = new JapaneseParser({ dicPath: '/dict' });
 japaneseParser.ready().then(() => {
   plugins.push(MarkParsed({ parser: japaneseParser }));

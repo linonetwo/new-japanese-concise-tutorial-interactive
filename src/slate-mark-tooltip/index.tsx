@@ -6,7 +6,7 @@ import styled, { createGlobalStyle } from 'styled-components';
 import ToolTipContent, { IToolTipProps } from './ToolTipContent';
 
 const ToolTipStyle = createGlobalStyle`
-  #slate-mark-intellisense {
+  #slate-mark-tooltip {
     /* move it down, near the text */
     margin-top: 0px;
     /* remove triangle */
@@ -15,13 +15,13 @@ const ToolTipStyle = createGlobalStyle`
     }
   }
 `;
-const IntellisenseMark = styled.mark`
+const ToolTipMark = styled.mark`
   background-color: transparent;
   &:hover {
     background-color: rgba(0, 0, 0, 0.1);
   }
 `;
-export default function MarkIntellisense(): Plugin {
+export default function MarkToolTip(): Plugin {
   return {
     renderEditor(props, editor, next) {
       const children = next();
@@ -30,7 +30,7 @@ export default function MarkIntellisense(): Plugin {
           {children}
           <ToolTipStyle />
           <Tooltip
-            id="slate-mark-intellisense"
+            id="slate-mark-tooltip"
             effect="solid"
             delayShow={70}
             delayUpdate={10}
@@ -50,14 +50,14 @@ export default function MarkIntellisense(): Plugin {
     renderMark(props, editor, next): ReactNode | void {
       const { children, mark, attributes } = props;
       return (
-        <IntellisenseMark
+        <ToolTipMark
           data-tip={JSON.stringify(mark)}
-          data-for="slate-mark-intellisense"
+          data-for="slate-mark-tooltip"
           onMouseOverCapture={Tooltip.rebuild}
           {...attributes}
         >
           {children}
-        </IntellisenseMark>
+        </ToolTipMark>
       );
     },
   };

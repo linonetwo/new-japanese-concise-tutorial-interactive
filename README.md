@@ -36,4 +36,4 @@ Texts was uploaded to [solid.authing.cn](https://new-japanese-concise-tutorial.s
 
 `slate-mark-parsed` is a plugin that use provided parser (in this demo, [nlcst-parse-japanese](https://github.com/azu/nlp-pattern-match/blob/master/packages/nlcst-parse-japanese/README.md)) to get Natural Language Concrete Syntax Tree, and generate Slate Marks on the document.
 
-`slate-mark-intellisense` consumes Slate Marks on a document, and provide Intellisense style tooltip.
+`slate-mark-tooltip` consumes Slate Marks on a document, and provide VSCode style tooltip.
