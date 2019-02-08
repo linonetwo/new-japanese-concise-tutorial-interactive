@@ -1,6 +1,6 @@
 # An interactive note for New Japanese Concise Tutorial
 
-[Online Demo](https://new-japanese-concise-tutorial-interactive-oezqwptftx.now.sh)
+[Online Demo](https://new-japanese-concise-tutorial-interactive-dpkjjsuhyq.now.sh)
 
 ## Feature
 
@@ -28,9 +28,15 @@ This project demonstrates basic usage of SoLiD POD (Linked Data Platform) and pl
 
 ### SoLiD POD
 
+#### List Files
+
 In `src/store/texts.ts`, it uses `comunicaEngine` to load file list on a POD with `GraphQL`.
 
 Texts was uploaded to [solid.authing.cn](https://new-japanese-concise-tutorial.solid.authing.cn/public/textbook/).
+
+#### Search Related Knowledges
+
+Fixed collocations and translation about text "です" are stored as triple on SoLiD POD, and connects to other knowledge as a web. These knowledge are searched by SPARQL and loaded as a list of Intellisense.
 
 ### SlateJS
 
