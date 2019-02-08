@@ -1,6 +1,6 @@
 # An interactive note for New Japanese Concise Tutorial
 
-[Online Demo](https://new-japanese-concise-tutorial-interactive-ffozkkoxia.now.sh)
+[Online Demo](https://new-japanese-concise-tutorial-interactive-oezqwptftx.now.sh)
 
 ## Feature
 
