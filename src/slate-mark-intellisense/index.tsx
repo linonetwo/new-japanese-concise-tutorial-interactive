@@ -17,6 +17,9 @@ const ToolTipStyle = createGlobalStyle`
 `;
 const IntellisenseMark = styled.mark`
   background-color: transparent;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
 `;
 export default function MarkIntellisense(): Plugin {
   return {
