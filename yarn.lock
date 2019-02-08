@@ -799,11 +799,12 @@
     rdf-string "^1.3.1"
     sparqlalgebrajs "^1.4.0"
 
-"@comunica/actor-context-preprocess-rdf-source-identifier@^1.5.1":
-  version "1.5.1"
-  resolved "http://registry.npm.taobao.org/@comunica/actor-context-preprocess-rdf-source-identifier/download/@comunica/actor-context-preprocess-rdf-source-identifier-1.5.1.tgz#154a1e26b5cacbd6e30b3a6a92d48c64341c2918"
+"@comunica/actor-context-preprocess-rdf-source-identifier@^1.5.4":
+  version "1.5.4"
+  resolved "http://registry.npm.taobao.org/@comunica/actor-context-preprocess-rdf-source-identifier/download/@comunica/actor-context-preprocess-rdf-source-identifier-1.5.4.tgz#0ad552bb0df437d963a95b450dc42bfb51ff36c4"
+  integrity sha1-CtVSuw30N9ljqVtFDcQr+1H/NsQ=
   dependencies:
-    asyncreiterable "^1.1.0"
+    asyncreiterable "^1.1.1"
 
 "@comunica/actor-http-memento@^1.5.1":
   version "1.5.1"
@@ -820,14 +821,14 @@
     isomorphic-fetch "^2.2.1"
     parse-link-header "^1.0.1"
 
-"@comunica/actor-init-sparql@^1.5.3":
-  version "1.5.3"
-  resolved "http://registry.npm.taobao.org/@comunica/actor-init-sparql/download/@comunica/actor-init-sparql-1.5.3.tgz#e15091d5092e88dfa49c7f5bf88212508e6a4daa"
-  integrity sha1-4VCR1QkuiN+knH9b+IISUI5qTao=
+"@comunica/actor-init-sparql@^1.5.4":
+  version "1.5.4"
+  resolved "http://registry.npm.taobao.org/@comunica/actor-init-sparql/download/@comunica/actor-init-sparql-1.5.4.tgz#6c2ec273e65388a4751baf1e47d00b649c240ae5"
+  integrity sha1-bC7Cc+ZTiKR1G68eR9ALZJwkCuU=
   dependencies:
     "@comunica/actor-abstract-bindings-hash" "^1.4.4"
     "@comunica/actor-abstract-mediatyped" "^1.4.0"
-    "@comunica/actor-context-preprocess-rdf-source-identifier" "^1.5.1"
+    "@comunica/actor-context-preprocess-rdf-source-identifier" "^1.5.4"
     "@comunica/actor-http-memento" "^1.5.1"
     "@comunica/actor-http-native" "^1.5.1"
     "@comunica/actor-optimize-query-operation-join-bgp" "^1.5.0"
@@ -854,11 +855,11 @@
     "@comunica/actor-query-operation-path-zero-or-more" "^1.4.5"
     "@comunica/actor-query-operation-path-zero-or-one" "^1.4.5"
     "@comunica/actor-query-operation-project" "^1.4.4"
-    "@comunica/actor-query-operation-quadpattern" "^1.4.5"
+    "@comunica/actor-query-operation-quadpattern" "^1.5.4"
     "@comunica/actor-query-operation-reduced-hash" "^1.4.5"
     "@comunica/actor-query-operation-service" "^1.4.4"
     "@comunica/actor-query-operation-slice" "^1.4.4"
-    "@comunica/actor-query-operation-sparql-endpoint" "^1.5.1"
+    "@comunica/actor-query-operation-sparql-endpoint" "^1.5.4"
     "@comunica/actor-query-operation-union" "^1.4.4"
     "@comunica/actor-query-operation-values" "^1.4.4"
     "@comunica/actor-rdf-dereference-http-parse" "^1.5.1"
@@ -868,15 +869,15 @@
     "@comunica/actor-rdf-metadata-extract-hydra-count" "^1.4.0"
     "@comunica/actor-rdf-metadata-primary-topic" "^1.4.0"
     "@comunica/actor-rdf-metadata-triple-predicate" "^1.4.0"
-    "@comunica/actor-rdf-parse-jsonld" "^1.5.1"
+    "@comunica/actor-rdf-parse-jsonld" "^1.5.4"
     "@comunica/actor-rdf-parse-n3" "^1.4.3"
     "@comunica/actor-rdf-parse-rdfxml" "^1.4.3"
-    "@comunica/actor-rdf-resolve-hypermedia-qpf" "^1.5.1"
-    "@comunica/actor-rdf-resolve-quad-pattern-federated" "^1.4.5"
-    "@comunica/actor-rdf-resolve-quad-pattern-file" "^1.4.5"
-    "@comunica/actor-rdf-resolve-quad-pattern-hypermedia" "^1.5.1"
-    "@comunica/actor-rdf-resolve-quad-pattern-sparql-json" "^1.5.1"
-    "@comunica/actor-rdf-serialize-jsonld" "^1.5.1"
+    "@comunica/actor-rdf-resolve-hypermedia-qpf" "^1.5.4"
+    "@comunica/actor-rdf-resolve-quad-pattern-federated" "^1.5.4"
+    "@comunica/actor-rdf-resolve-quad-pattern-file" "^1.5.4"
+    "@comunica/actor-rdf-resolve-quad-pattern-hypermedia" "^1.5.4"
+    "@comunica/actor-rdf-resolve-quad-pattern-sparql-json" "^1.5.4"
+    "@comunica/actor-rdf-serialize-jsonld" "^1.5.4"
     "@comunica/actor-rdf-serialize-n3" "^1.4.3"
     "@comunica/actor-rdf-source-identifier-file-content-type" "^1.5.1"
     "@comunica/actor-rdf-source-identifier-hypermedia-qpf" "^1.5.1"
@@ -902,8 +903,8 @@
     "@comunica/bus-rdf-metadata" "^1.4.0"
     "@comunica/bus-rdf-metadata-extract" "^1.4.0"
     "@comunica/bus-rdf-parse" "^1.4.2"
-    "@comunica/bus-rdf-resolve-hypermedia" "^1.4.5"
-    "@comunica/bus-rdf-resolve-quad-pattern" "^1.4.5"
+    "@comunica/bus-rdf-resolve-hypermedia" "^1.5.4"
+    "@comunica/bus-rdf-resolve-quad-pattern" "^1.5.4"
     "@comunica/bus-rdf-serialize" "^1.4.0"
     "@comunica/bus-rdf-source-identifier" "^1.5.1"
     "@comunica/bus-sparql-parse" "^1.4.0"
@@ -917,7 +918,7 @@
     "@comunica/mediator-race" "^1.4.0"
     "@comunica/runner" "^1.4.4"
     "@comunica/runner-cli" "^1.4.4"
-    asyncreiterable "^1.1.0"
+    asyncreiterable "^1.1.1"
     minimist "^1.2.0"
     negotiate "^1.0.1"
     rdf-string "^1.3.1"
@@ -1089,9 +1090,10 @@
   dependencies:
     rdf-string "^1.3.1"
 
-"@comunica/actor-query-operation-quadpattern@^1.4.5":
-  version "1.4.5"
-  resolved "http://registry.npm.taobao.org/@comunica/actor-query-operation-quadpattern/download/@comunica/actor-query-operation-quadpattern-1.4.5.tgz#2553807e3604710ef346b4f297f4fb3e52218980"
+"@comunica/actor-query-operation-quadpattern@^1.5.4":
+  version "1.5.4"
+  resolved "http://registry.npm.taobao.org/@comunica/actor-query-operation-quadpattern/download/@comunica/actor-query-operation-quadpattern-1.5.4.tgz#b6398465ca9f7629fad2fe2c98e2ed067e7fcd6f"
+  integrity sha1-tjmEZcqfdin60v4smOLtBn5/zW8=
   dependencies:
     asynciterator-promiseproxy "^2.0.0"
     rdf-string "^1.3.1"
@@ -1114,11 +1116,12 @@
   version "1.4.4"
   resolved "http://registry.npm.taobao.org/@comunica/actor-query-operation-slice/download/@comunica/actor-query-operation-slice-1.4.4.tgz#0a00c651a767f93c31b4240912dbbd2b4920bad8"
 
-"@comunica/actor-query-operation-sparql-endpoint@^1.5.1":
-  version "1.5.1"
-  resolved "http://registry.npm.taobao.org/@comunica/actor-query-operation-sparql-endpoint/download/@comunica/actor-query-operation-sparql-endpoint-1.5.1.tgz#229a107b8890bc3d9999e70378abc688cce941e6"
+"@comunica/actor-query-operation-sparql-endpoint@^1.5.4":
+  version "1.5.4"
+  resolved "http://registry.npm.taobao.org/@comunica/actor-query-operation-sparql-endpoint/download/@comunica/actor-query-operation-sparql-endpoint-1.5.4.tgz#13952f6bd9ffebdef5be7b84a5cd0415acf3c495"
+  integrity sha1-E5Uva9n/6971vnuEpc0EFazzxJU=
   dependencies:
-    "@comunica/utils-datasource" "^1.4.5"
+    "@comunica/utils-datasource" "^1.5.4"
     arrayify-stream "^1.0.0"
     asynciterator "^2.0.1"
     fetch-sparql-endpoint "^1.4.0"
@@ -1179,12 +1182,13 @@
   version "1.4.0"
   resolved "http://registry.npm.taobao.org/@comunica/actor-rdf-metadata-triple-predicate/download/@comunica/actor-rdf-metadata-triple-predicate-1.4.0.tgz#d0fdda437c20d8b2efbf2ff5c5d76389562b3a19"
 
-"@comunica/actor-rdf-parse-jsonld@^1.5.1":
-  version "1.5.1"
-  resolved "http://registry.npm.taobao.org/@comunica/actor-rdf-parse-jsonld/download/@comunica/actor-rdf-parse-jsonld-1.5.1.tgz#764eed9144db7800fce0965f64f6bdf138bb7265"
+"@comunica/actor-rdf-parse-jsonld@^1.5.4":
+  version "1.5.4"
+  resolved "http://registry.npm.taobao.org/@comunica/actor-rdf-parse-jsonld/download/@comunica/actor-rdf-parse-jsonld-1.5.4.tgz#e732a2b71a6c0aab3f6b14cf962602b8f1e085c3"
+  integrity sha1-5zKitxpsCqs/axTPliYCuPHghcM=
   dependencies:
     "@rdfjs/data-model" "^1.1.1"
-    jsonld "^1.0.2"
+    jsonld "^1.5.0"
     rdf-terms "^1.4.0"
     stream-to-string "^1.1.0"
 
@@ -1200,18 +1204,20 @@
   dependencies:
     rdfxml-streaming-parser "^1.1.0"
 
-"@comunica/actor-rdf-resolve-hypermedia-qpf@^1.5.1":
-  version "1.5.1"
-  resolved "http://registry.npm.taobao.org/@comunica/actor-rdf-resolve-hypermedia-qpf/download/@comunica/actor-rdf-resolve-hypermedia-qpf-1.5.1.tgz#269000b6c482f21c971481f9812ef3e1a606367e"
+"@comunica/actor-rdf-resolve-hypermedia-qpf@^1.5.4":
+  version "1.5.4"
+  resolved "http://registry.npm.taobao.org/@comunica/actor-rdf-resolve-hypermedia-qpf/download/@comunica/actor-rdf-resolve-hypermedia-qpf-1.5.4.tgz#05b73605e90a70e0328fa4f4038f482e77707e3e"
+  integrity sha1-Bbc2BekKcOAyj6T0A49ILndwfj4=
   dependencies:
     "@rdfjs/data-model" "^1.1.0"
     asynciterator-promiseproxy "^2.0.0"
     rdf-string "^1.2.0"
     rdf-terms "^1.2.0"
 
-"@comunica/actor-rdf-resolve-quad-pattern-federated@^1.4.5":
-  version "1.4.5"
-  resolved "http://registry.npm.taobao.org/@comunica/actor-rdf-resolve-quad-pattern-federated/download/@comunica/actor-rdf-resolve-quad-pattern-federated-1.4.5.tgz#3a1d31c8e15b4028b2d61fa7c16200481f5e19b4"
+"@comunica/actor-rdf-resolve-quad-pattern-federated@^1.5.4":
+  version "1.5.4"
+  resolved "http://registry.npm.taobao.org/@comunica/actor-rdf-resolve-quad-pattern-federated/download/@comunica/actor-rdf-resolve-quad-pattern-federated-1.5.4.tgz#9ebd5dcb222343b4182a9e4f670e98a79861c5a1"
+  integrity sha1-nr1dyyIjQ7QYKp5PZw6Yp5hhxaE=
   dependencies:
     "@rdfjs/data-model" "^1.1.1"
     asynciterator "^2.0.1"
@@ -1219,27 +1225,30 @@
     asynciterator-union "^2.1.1"
     lodash.omit "^4.5.0"
 
-"@comunica/actor-rdf-resolve-quad-pattern-file@^1.4.5":
-  version "1.4.5"
-  resolved "http://registry.npm.taobao.org/@comunica/actor-rdf-resolve-quad-pattern-file/download/@comunica/actor-rdf-resolve-quad-pattern-file-1.4.5.tgz#32be567c22da017a5e5d292e1c0cf2915ba2f99a"
+"@comunica/actor-rdf-resolve-quad-pattern-file@^1.5.4":
+  version "1.5.4"
+  resolved "http://registry.npm.taobao.org/@comunica/actor-rdf-resolve-quad-pattern-file/download/@comunica/actor-rdf-resolve-quad-pattern-file-1.5.4.tgz#e74b7d10f2e413b36a62b6509cf8d5dcee2c31fc"
+  integrity sha1-50t9EPLkE7NqYrZQnPjV3O4sMfw=
   dependencies:
     asynciterator "^2.0.1"
     n3 "^1.0.0"
     rdf-string "^1.3.1"
 
-"@comunica/actor-rdf-resolve-quad-pattern-hypermedia@^1.5.1":
-  version "1.5.1"
-  resolved "http://registry.npm.taobao.org/@comunica/actor-rdf-resolve-quad-pattern-hypermedia/download/@comunica/actor-rdf-resolve-quad-pattern-hypermedia-1.5.1.tgz#ecd472bd18920255fdfcfd83ac3c41918661885e"
+"@comunica/actor-rdf-resolve-quad-pattern-hypermedia@^1.5.4":
+  version "1.5.4"
+  resolved "http://registry.npm.taobao.org/@comunica/actor-rdf-resolve-quad-pattern-hypermedia/download/@comunica/actor-rdf-resolve-quad-pattern-hypermedia-1.5.4.tgz#60729454b31bdc1b9c9625031d691f44590893e2"
+  integrity sha1-YHKUVLMb3BucliUDHWkfRFkIk+I=
   dependencies:
-    "@comunica/utils-datasource" "^1.4.5"
+    "@comunica/utils-datasource" "^1.5.4"
     "@rdfjs/data-model" "^1.1.1"
     asynciterator-promiseproxy "^2.0.0"
     rdf-string "^1.3.1"
     rdf-terms "^1.4.0"
 
-"@comunica/actor-rdf-resolve-quad-pattern-sparql-json@^1.5.1":
-  version "1.5.1"
-  resolved "http://registry.npm.taobao.org/@comunica/actor-rdf-resolve-quad-pattern-sparql-json/download/@comunica/actor-rdf-resolve-quad-pattern-sparql-json-1.5.1.tgz#276bd83540dc3ce7885c54921c485ab0b767a210"
+"@comunica/actor-rdf-resolve-quad-pattern-sparql-json@^1.5.4":
+  version "1.5.4"
+  resolved "http://registry.npm.taobao.org/@comunica/actor-rdf-resolve-quad-pattern-sparql-json/download/@comunica/actor-rdf-resolve-quad-pattern-sparql-json-1.5.4.tgz#44cc6b1a1cbddc804c3cb5ed16cfbf1d8092c7d2"
+  integrity sha1-RMxrGhy93IBMPLXtFs+/HYCSx9I=
   dependencies:
     "@rdfjs/data-model" "^1.1.1"
     asynciterator "^2.0.1"
@@ -1248,12 +1257,13 @@
     sparqlalgebrajs "^1.4.0"
     sparqljson-parse "^1.5.0"
 
-"@comunica/actor-rdf-serialize-jsonld@^1.5.1":
-  version "1.5.1"
-  resolved "http://registry.npm.taobao.org/@comunica/actor-rdf-serialize-jsonld/download/@comunica/actor-rdf-serialize-jsonld-1.5.1.tgz#714725b356b9fadc610d7aff594141a37e81203b"
+"@comunica/actor-rdf-serialize-jsonld@^1.5.4":
+  version "1.5.4"
+  resolved "http://registry.npm.taobao.org/@comunica/actor-rdf-serialize-jsonld/download/@comunica/actor-rdf-serialize-jsonld-1.5.4.tgz#c203cba82afe86c0c5bd602d793bc7f0753dc68b"
+  integrity sha1-wgPLqCr+hsDFvWAteTvH8HU9xos=
   dependencies:
     arrayify-stream "^1.0.0"
-    jsonld "^1.0.2"
+    jsonld "^1.5.0"
     streamify-array "^1.0.0"
 
 "@comunica/actor-rdf-serialize-n3@^1.4.3":
@@ -1388,19 +1398,21 @@
   dependencies:
     "@comunica/actor-abstract-mediatyped" "^1.4.0"
 
-"@comunica/bus-rdf-resolve-hypermedia@^1.4.5":
-  version "1.4.5"
-  resolved "http://registry.npm.taobao.org/@comunica/bus-rdf-resolve-hypermedia/download/@comunica/bus-rdf-resolve-hypermedia-1.4.5.tgz#3f1ad664ddb173c372200ff46173c7f4ea5d2022"
+"@comunica/bus-rdf-resolve-hypermedia@^1.5.4":
+  version "1.5.4"
+  resolved "http://registry.npm.taobao.org/@comunica/bus-rdf-resolve-hypermedia/download/@comunica/bus-rdf-resolve-hypermedia-1.5.4.tgz#0d701a603aa2cfd5459ae3286f74eedfd1967e22"
+  integrity sha1-DXAaYDqiz9VFmuMob3Tu39GWfiI=
   dependencies:
     asynciterator "^2.0.0"
-    asyncreiterable "^1.1.0"
+    asyncreiterable "^1.1.1"
 
-"@comunica/bus-rdf-resolve-quad-pattern@^1.4.5":
-  version "1.4.5"
-  resolved "http://registry.npm.taobao.org/@comunica/bus-rdf-resolve-quad-pattern/download/@comunica/bus-rdf-resolve-quad-pattern-1.4.5.tgz#8bb864753bb2a2502ff4abde66aae424669273f6"
+"@comunica/bus-rdf-resolve-quad-pattern@^1.5.4":
+  version "1.5.4"
+  resolved "http://registry.npm.taobao.org/@comunica/bus-rdf-resolve-quad-pattern/download/@comunica/bus-rdf-resolve-quad-pattern-1.5.4.tgz#97b3754fcfbe22ea87d415515eefa66835876230"
+  integrity sha1-l7N1T8++IuqH1BVRXu+maDWHYjA=
   dependencies:
     asynciterator "^2.0.1"
-    asyncreiterable "^1.1.0"
+    asyncreiterable "^1.1.1"
 
 "@comunica/bus-rdf-serialize@^1.4.0":
   version "1.4.0"
@@ -1474,13 +1486,14 @@
     lodash.assign "^4.2.0"
     lodash.defaults "^4.2.0"
 
-"@comunica/utils-datasource@^1.4.5":
-  version "1.4.5"
-  resolved "http://registry.npm.taobao.org/@comunica/utils-datasource/download/@comunica/utils-datasource-1.4.5.tgz#0e47b3668da062978fde3f55ff6fe9a8d62ac461"
+"@comunica/utils-datasource@^1.5.4":
+  version "1.5.4"
+  resolved "http://registry.npm.taobao.org/@comunica/utils-datasource/download/@comunica/utils-datasource-1.5.4.tgz#aedfa1ced3651d631030691e7393250cb4b88fa5"
+  integrity sha1-rt+hztNlHWMQMGkec5MlDLS4j6U=
   dependencies:
     arrayify-stream "^1.0.0"
     asynciterator "^2.0.0"
-    asyncreiterable "^1.0.0"
+    asyncreiterable "^1.1.1"
 
 "@csstools/convert-colors@^1.4.0":
   version "1.4.0"
@@ -1686,9 +1699,10 @@
   version "2.0.1"
   resolved "http://registry.npm.taobao.org/@types/i18next-browser-languagedetector/download/@types/i18next-browser-languagedetector-2.0.1.tgz#35490253884b15311c54108697d5a7147a75df95"
 
-"@types/jest@23.3.13":
-  version "23.3.13"
-  resolved "http://registry.npm.taobao.org/@types/jest/download/@types/jest-23.3.13.tgz#c81484b6f4ca007bb09887ed15ecb3286d58f928"
+"@types/jest@24.0.0":
+  version "24.0.0"
+  resolved "http://registry.npm.taobao.org/@types/jest/download/@types/jest-24.0.0.tgz#848492026c327b3548d92be0352a545c36a21e8a"
+  integrity sha1-hISSAmwyezVI2SvgNSpUXDaiHoo=
 
 "@types/lodash.isequal@^4.5.2":
   version "4.5.3"
@@ -1700,9 +1714,14 @@
   version "4.14.120"
   resolved "http://registry.npm.taobao.org/@types/lodash/download/@types/lodash-4.14.120.tgz#cf265d06f6c7a710db087ed07523ab8c1a24047b"
 
-"@types/node@*", "@types/node@10.12.18", "@types/node@^10.11.4":
+"@types/node@*", "@types/node@^10.11.4":
   version "10.12.18"
   resolved "http://registry.npm.taobao.org/@types/node/download/@types/node-10.12.18.tgz#1d3ca764718915584fcd9f6344621b7672665c67"
+
+"@types/node@10.12.22":
+  version "10.12.22"
+  resolved "http://registry.npm.taobao.org/@types/node/download/@types/node-10.12.22.tgz#eb2a8a1c24ee4a59cf87549cc67d60976ebaebd2"
+  integrity sha1-6yqKHCTuSlnPh1Scxn1gl26669I=
 
 "@types/prop-types@*":
   version "15.5.8"
@@ -1718,9 +1737,10 @@
   dependencies:
     "@types/node" "*"
 
-"@types/react-dom@16.0.11":
-  version "16.0.11"
-  resolved "http://registry.npm.taobao.org/@types/react-dom/download/@types/react-dom-16.0.11.tgz#bd10ccb0d9260343f4b9a49d4f7a8330a5c1f081"
+"@types/react-dom@16.8.0":
+  version "16.8.0"
+  resolved "http://registry.npm.taobao.org/@types/react-dom/download/@types/react-dom-16.8.0.tgz#c565f43f9d2ec911f9e0b8f3b74e25e67879aa3f"
+  integrity sha1-xWX0P50uyRH54Ljzt04l5nh5qj8=
   dependencies:
     "@types/react" "*"
 
@@ -1732,9 +1752,17 @@
     "@types/react" "*"
     redux "^4.0.0"
 
-"@types/react@*", "@types/react@16.7.20":
+"@types/react@*":
   version "16.7.20"
   resolved "http://registry.npm.taobao.org/@types/react/download/@types/react-16.7.20.tgz#13ae752c012710d0fa800985ca809814b51d3b58"
+  dependencies:
+    "@types/prop-types" "*"
+    csstype "^2.2.0"
+
+"@types/react@16.8.2":
+  version "16.8.2"
+  resolved "http://registry.npm.taobao.org/@types/react/download/@types/react-16.8.2.tgz#3b7a7f7ea89d1c7d68b00849fb5de839011c077b"
+  integrity sha1-O3p/fqidHH1osAhJ+13oOQEcB3s=
   dependencies:
     "@types/prop-types" "*"
     csstype "^2.2.0"
@@ -1753,16 +1781,25 @@
     "@types/slate" "*"
     immutable "^3.8.2"
 
-"@types/slate@*", "@types/slate@^0.43.8":
+"@types/slate@*":
   version "0.43.8"
   resolved "http://registry.npm.taobao.org/@types/slate/download/@types/slate-0.43.8.tgz#add8f65c0bcb3a1682ccbc72a30efa0326a10991"
   dependencies:
     "@types/react" "*"
     immutable "^3.8.2"
 
-"@types/styled-components@^4.1.6":
-  version "4.1.6"
-  resolved "http://registry.npm.taobao.org/@types/styled-components/download/@types/styled-components-4.1.6.tgz#9aa1d47dbc6bae540083869bcc6c639c6e9af0fe"
+"@types/slate@^0.43.9":
+  version "0.43.9"
+  resolved "http://registry.npm.taobao.org/@types/slate/download/@types/slate-0.43.9.tgz#779e9593a7573fe28d80a9860474b3f3b14ade04"
+  integrity sha1-d56Vk6dXP+KNgKmGBHSz87FK3gQ=
+  dependencies:
+    "@types/react" "*"
+    immutable "^3.8.2"
+
+"@types/styled-components@^4.1.8":
+  version "4.1.8"
+  resolved "http://registry.npm.taobao.org/@types/styled-components/download/@types/styled-components-4.1.8.tgz#15c8a53bb4b9066e528fafb7558963dee5690ae0"
+  integrity sha1-FcilO7S5Bm5Sj6+3VYlj3uVpCuA=
   dependencies:
     "@types/node" "*"
     "@types/react" "*"
@@ -2215,9 +2252,10 @@ asynckit@^0.4.0:
   version "0.4.0"
   resolved "http://registry.npm.taobao.org/asynckit/download/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
 
-asyncreiterable@^1.0.0, asyncreiterable@^1.1.0:
-  version "1.1.0"
-  resolved "http://registry.npm.taobao.org/asyncreiterable/download/asyncreiterable-1.1.0.tgz#438175b924139d52503cfbf050e5d61fe19c79c4"
+asyncreiterable@^1.1.1:
+  version "1.1.1"
+  resolved "http://registry.npm.taobao.org/asyncreiterable/download/asyncreiterable-1.1.1.tgz#8a6ebe14966c779591feb5a1a8050b69ec90c869"
+  integrity sha1-im6+FJZsd5WR/rWhqAULaeyQyGk=
   dependencies:
     asynciterator "^2.0.0"
 
@@ -2564,12 +2602,6 @@ big.js@^5.2.2:
 binary-extensions@^1.0.0:
   version "1.12.0"
   resolved "http://registry.npm.taobao.org/binary-extensions/download/binary-extensions-1.12.0.tgz#c2d780f53d45bba8317a8902d4ceeaf3a6385b14"
-
-bindings@^1.3.0:
-  version "1.4.0"
-  resolved "http://registry.npm.taobao.org/bindings/download/bindings-1.4.0.tgz#909efa49f2ebe07ecd3cb136778f665052040127"
-  dependencies:
-    file-uri-to-path "1.0.0"
 
 bluebird@^3.5.1, bluebird@^3.5.3:
   version "3.5.3"
@@ -4423,10 +4455,6 @@ file-loader@2.0.0:
     loader-utils "^1.0.2"
     schema-utils "^1.0.0"
 
-file-uri-to-path@1.0.0:
-  version "1.0.0"
-  resolved "http://registry.npm.taobao.org/file-uri-to-path/download/file-uri-to-path-1.0.0.tgz#553a7b8446ff6f684359c445f1e37a05dacc33dd"
-
 filename-regex@^2.0.0:
   version "2.0.1"
   resolved "http://registry.npm.taobao.org/filename-regex/download/filename-regex-2.0.1.tgz#c1c4b9bee3e09725ddb106b75c1e301fe2f18b26"
@@ -4999,16 +5027,23 @@ hoek@4.x.x:
   version "4.2.1"
   resolved "http://registry.npm.taobao.org/hoek/download/hoek-4.2.1.tgz#9634502aa12c445dd5a7c5734b572bb8738aacbb"
 
-hoist-non-react-statics@3.2.1, hoist-non-react-statics@^3.2.1:
-  version "3.2.1"
-  resolved "http://registry.npm.taobao.org/hoist-non-react-statics/download/hoist-non-react-statics-3.2.1.tgz#c09c0555c84b38a7ede6912b61efddafd6e75e1e"
+hoist-non-react-statics@3.3.0:
+  version "3.3.0"
+  resolved "http://registry.npm.taobao.org/hoist-non-react-statics/download/hoist-non-react-statics-3.3.0.tgz#b09178f0122184fb95acf525daaecb4d8f45958b"
+  integrity sha1-sJF48BIhhPuVrPUl2q7LTY9FlYs=
   dependencies:
-    react-is "^16.3.2"
+    react-is "^16.7.0"
 
 hoist-non-react-statics@^2.3.1:
   version "2.5.5"
   resolved "http://registry.npm.taobao.org/hoist-non-react-statics/download/hoist-non-react-statics-2.5.5.tgz#c5903cf409c0dfd908f388e619d86b9c1174cb47"
   integrity sha1-xZA89AnA39kI84jmGdhrnBF0y0c=
+
+hoist-non-react-statics@^3.2.1:
+  version "3.2.1"
+  resolved "http://registry.npm.taobao.org/hoist-non-react-statics/download/hoist-non-react-statics-3.2.1.tgz#c09c0555c84b38a7ede6912b61efddafd6e75e1e"
+  dependencies:
+    react-is "^16.3.2"
 
 home-or-tmp@^2.0.0:
   version "2.0.0"
@@ -5151,10 +5186,10 @@ i18next-browser-languagedetector@^2.2.4:
   version "2.2.4"
   resolved "http://registry.npm.taobao.org/i18next-browser-languagedetector/download/i18next-browser-languagedetector-2.2.4.tgz#b02412d7ab15d7d74e1b1317d67d8a244b219ee3"
 
-i18next@^14.0.1:
-  version "14.0.1"
-  resolved "http://registry.npm.taobao.org/i18next/download/i18next-14.0.1.tgz#c5f0292ea6389394b6056f597b75f1f9aa03124f"
-  integrity sha1-xfApLqY4k5S2BW9Ze3Xx+aoDEk8=
+i18next@^14.1.1:
+  version "14.1.1"
+  resolved "http://registry.npm.taobao.org/i18next/download/i18next-14.1.1.tgz#d569aff68c088151f09fcb0cb6f44b36d62731d3"
+  integrity sha1-1Wmv9owIgVHwn8sMtvRLNtYnMdM=
 
 iconv-lite@0.4.23:
   version "0.4.23"
@@ -6216,11 +6251,12 @@ jsonld@^0.4.11:
     request "^2.61.0"
     xmldom "0.1.19"
 
-jsonld@^1.0.2:
-  version "1.4.0"
-  resolved "http://registry.npm.taobao.org/jsonld/download/jsonld-1.4.0.tgz#71a1546972b9a8d98a7ea814371667b86d01ba1e"
+jsonld@^1.5.0:
+  version "1.5.1"
+  resolved "http://registry.npm.taobao.org/jsonld/download/jsonld-1.5.1.tgz#3b7a6060ba50157db92fdb550749bf600d504360"
+  integrity sha1-O3pgYLpQFX25L9tVB0m/YA1QQ2A=
   dependencies:
-    rdf-canonize "^0.3.0"
+    rdf-canonize "^1.0.1"
     request "^2.88.0"
     semver "^5.6.0"
     xmldom "0.1.19"
@@ -6831,7 +6867,7 @@ n3@^1.0.0:
   version "1.0.3"
   resolved "http://registry.npm.taobao.org/n3/download/n3-1.0.3.tgz#781e5de7965d3e52955ac9b970a438bb36e11b9a"
 
-nan@^2.11.1, nan@^2.9.2:
+nan@^2.9.2:
   version "2.12.1"
   resolved "http://registry.npm.taobao.org/nan/download/nan-2.12.1.tgz#7b1aa193e9aa86057e3c7bbd0ac448e770925552"
 
@@ -8267,22 +8303,13 @@ rc@^1.2.7, rc@~1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-rdf-canonize-native@^0.3.0:
-  version "0.3.0"
-  resolved "http://registry.npm.taobao.org/rdf-canonize-native/download/rdf-canonize-native-0.3.0.tgz#de6c4a67345adf402520846778f5ad67728e50e2"
-  dependencies:
-    bindings "^1.3.0"
-    nan "^2.11.1"
-    semver "^5.6.0"
-
-rdf-canonize@^0.3.0:
-  version "0.3.0"
-  resolved "http://registry.npm.taobao.org/rdf-canonize/download/rdf-canonize-0.3.0.tgz#f33c1725a4496d8c47871b376e5a9b873399ecea"
+rdf-canonize@^1.0.1:
+  version "1.0.1"
+  resolved "http://registry.npm.taobao.org/rdf-canonize/download/rdf-canonize-1.0.1.tgz#0a200a12c169e0008dd10e5b2b3855a55db0626c"
+  integrity sha1-CiAKEsFp4ACN0Q5bKzhVpV2wYmw=
   dependencies:
     node-forge "^0.7.6"
     semver "^5.6.0"
-  optionalDependencies:
-    rdf-canonize-native "^0.3.0"
 
 rdf-string@^1.1.1, rdf-string@^1.2.0, rdf-string@^1.3.1:
   version "1.3.1"
@@ -8344,26 +8371,27 @@ react-dev-utils@^7.0.0, react-dev-utils@^7.0.1:
     strip-ansi "4.0.0"
     text-table "0.2.0"
 
-react-dom@^16.7.0:
-  version "16.7.0"
-  resolved "http://registry.npm.taobao.org/react-dom/download/react-dom-16.7.0.tgz#a17b2a7ca89ee7390bc1ed5eb81783c7461748b8"
+react-dom@^16.8.1:
+  version "16.8.1"
+  resolved "http://registry.npm.taobao.org/react-dom/download/react-dom-16.8.1.tgz#ec860f98853d09d39bafd3a6f1e12389d283dbb4"
+  integrity sha1-7IYPmIU9CdObr9Om8eEjidKD27Q=
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.2"
-    scheduler "^0.12.0"
+    scheduler "^0.13.1"
 
 react-error-overlay@^5.1.2:
   version "5.1.2"
   resolved "http://registry.npm.taobao.org/react-error-overlay/download/react-error-overlay-5.1.2.tgz#888957b884d4b25b083a82ad550f7aad96585394"
 
-react-i18next@^9.0.8:
-  version "9.0.8"
-  resolved "http://registry.npm.taobao.org/react-i18next/download/react-i18next-9.0.8.tgz#a77561641f23c86bd81a68bb2464c5e78b02c04b"
-  integrity sha1-p3VhZB8jyGvYGmi7JGTF54sCwEs=
+react-i18next@^10.0.1:
+  version "10.0.1"
+  resolved "http://registry.npm.taobao.org/react-i18next/download/react-i18next-10.0.1.tgz#4b598f4c8cc218f0fe918b21668ee460ed04cd39"
+  integrity sha1-S1mPTIzCGPD+kYshZo7kYO0EzTk=
   dependencies:
     "@babel/runtime" "^7.3.1"
-    hoist-non-react-statics "3.2.1"
+    hoist-non-react-statics "3.3.0"
     html-parse-stringify2 "2.0.1"
 
 react-icons@^3.3.0:
@@ -8377,6 +8405,11 @@ react-immutable-proptypes@^2.1.0:
 react-is@^16.3.2, react-is@^16.6.0, react-is@^16.6.3:
   version "16.7.0"
   resolved "http://registry.npm.taobao.org/react-is/download/react-is-16.7.0.tgz#c1bd21c64f1f1364c6f70695ec02d69392f41bfa"
+
+react-is@^16.7.0:
+  version "16.8.1"
+  resolved "http://registry.npm.taobao.org/react-is/download/react-is-16.8.1.tgz#a80141e246eb894824fb4f2901c0c50ef31d4cdb"
+  integrity sha1-qAFB4kbriUgk+08pAcDFDvMdTNs=
 
 react-lifecycles-compat@^3.0.2:
   version "3.0.4"
@@ -8465,14 +8498,15 @@ react-tooltip@^3.9.2:
     classnames "^2.2.5"
     prop-types "^15.6.0"
 
-react@^16.7.0:
-  version "16.7.0"
-  resolved "http://registry.npm.taobao.org/react/download/react-16.7.0.tgz#b674ec396b0a5715873b350446f7ea0802ab6381"
+react@^16.8.1:
+  version "16.8.1"
+  resolved "http://registry.npm.taobao.org/react/download/react-16.8.1.tgz#ae11831f6cb2a05d58603a976afc8a558e852c4a"
+  integrity sha1-rhGDH2yyoF1YYDqXavyKVY6FLEo=
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.2"
-    scheduler "^0.12.0"
+    scheduler "^0.13.1"
 
 read-pkg-up@^1.0.1:
   version "1.0.1"
@@ -8931,9 +8965,10 @@ saxes@^3.1.4:
   dependencies:
     xmlchars "^1.3.1"
 
-scheduler@^0.12.0:
-  version "0.12.0"
-  resolved "http://registry.npm.taobao.org/scheduler/download/scheduler-0.12.0.tgz#8ab17699939c0aedc5a196a657743c496538647b"
+scheduler@^0.13.1:
+  version "0.13.1"
+  resolved "http://registry.npm.taobao.org/scheduler/download/scheduler-0.13.1.tgz#1a217df1bfaabaf4f1b92a9127d5d732d85a9591"
+  integrity sha1-GiF98b+quvTxuSqRJ9XXMthalZE=
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
@@ -9109,9 +9144,10 @@ slash@^1.0.0:
   version "1.0.0"
   resolved "http://registry.npm.taobao.org/slash/download/slash-1.0.0.tgz#c41f2f6c39fc16d1cd17ad4b5d896114ae470d55"
 
-slate-base64-serializer@^0.2.94:
-  version "0.2.94"
-  resolved "http://registry.npm.taobao.org/slate-base64-serializer/download/slate-base64-serializer-0.2.94.tgz#b908c3af481b9a0ead78f313653414c4b2b4b2d5"
+slate-base64-serializer@^0.2.95:
+  version "0.2.95"
+  resolved "http://registry.npm.taobao.org/slate-base64-serializer/download/slate-base64-serializer-0.2.95.tgz#018ccf749f0f0f62fc2d5f4722fd770d359cf76b"
+  integrity sha1-AYzPdJ8PD2L8LV9HIv13DTWc92s=
   dependencies:
     isomorphic-base64 "^1.0.2"
 
@@ -9128,21 +9164,25 @@ slate-hotkeys@^0.2.8:
     is-hotkey "0.1.4"
     slate-dev-environment "^0.2.1"
 
-slate-plain-serializer@^0.6.33:
-  version "0.6.33"
-  resolved "http://registry.npm.taobao.org/slate-plain-serializer/download/slate-plain-serializer-0.6.33.tgz#b731ecd8757f0d402ab36823f4be641c3f11a229"
+slate-plain-serializer@^0.6.34:
+  version "0.6.34"
+  resolved "http://registry.npm.taobao.org/slate-plain-serializer/download/slate-plain-serializer-0.6.34.tgz#8775edc1190d5fe3c7196eb0ad665607d0547a87"
+  integrity sha1-h3XtwRkNX+PHGW6wrWZWB9BUeoc=
 
-slate-prop-types@^0.5.24:
-  version "0.5.24"
-  resolved "http://registry.npm.taobao.org/slate-prop-types/download/slate-prop-types-0.5.24.tgz#ecff6584e250d88ff8384ff2bd820eec7d296913"
+slate-prop-types@^0.5.25:
+  version "0.5.25"
+  resolved "http://registry.npm.taobao.org/slate-prop-types/download/slate-prop-types-0.5.25.tgz#bbee28fec3eacb51209bc48eea1962374b8a44b5"
+  integrity sha1-u+4o/sPqy1Egm8SO6hliN0uKRLU=
 
-slate-react-placeholder@^0.1.12:
-  version "0.1.12"
-  resolved "http://registry.npm.taobao.org/slate-react-placeholder/download/slate-react-placeholder-0.1.12.tgz#d09936acf1570f9178d3a40a56ff0616f67e1fd7"
+slate-react-placeholder@^0.1.13:
+  version "0.1.13"
+  resolved "http://registry.npm.taobao.org/slate-react-placeholder/download/slate-react-placeholder-0.1.13.tgz#2e442d88b189bff203bdac454a05ce2637a19000"
+  integrity sha1-LkQtiLGJv/IDvaxFSgXOJjehkAA=
 
-slate-react@^0.21.15:
-  version "0.21.15"
-  resolved "http://registry.npm.taobao.org/slate-react/download/slate-react-0.21.15.tgz#f616f59f2fd91755704c21512972b87f3df76a9e"
+slate-react@^0.21.16:
+  version "0.21.16"
+  resolved "http://registry.npm.taobao.org/slate-react/download/slate-react-0.21.16.tgz#fa13b2228ffa6f4d9325bb61995d0231a62ff7b5"
+  integrity sha1-+hOyIo/6b02TJbthmV0CMaYv97U=
   dependencies:
     debug "^3.1.0"
     get-window "^1.1.1"
@@ -9152,18 +9192,19 @@ slate-react@^0.21.15:
     prop-types "^15.5.8"
     react-immutable-proptypes "^2.1.0"
     selection-is-backward "^1.0.0"
-    slate-base64-serializer "^0.2.94"
+    slate-base64-serializer "^0.2.95"
     slate-dev-environment "^0.2.1"
     slate-hotkeys "^0.2.8"
-    slate-plain-serializer "^0.6.33"
-    slate-prop-types "^0.5.24"
-    slate-react-placeholder "^0.1.12"
+    slate-plain-serializer "^0.6.34"
+    slate-prop-types "^0.5.25"
+    slate-react-placeholder "^0.1.13"
     tiny-invariant "^1.0.1"
     tiny-warning "^0.0.3"
 
-slate@^0.44.9:
-  version "0.44.9"
-  resolved "http://registry.npm.taobao.org/slate/download/slate-0.44.9.tgz#0fc9ba9f08b379b86c4c0a1ddebbe6bf28aa3c4b"
+slate@^0.44.10:
+  version "0.44.10"
+  resolved "http://registry.npm.taobao.org/slate/download/slate-0.44.10.tgz#ac7c3e3cf85570a8723a64a8a7807c881ddbfa8a"
+  integrity sha1-rHw+PPhVcKhyOmSop4B8iB3b+oo=
   dependencies:
     debug "^3.1.0"
     direction "^0.1.5"
@@ -9587,9 +9628,10 @@ styled-is@^1.1.5:
   version "1.1.5"
   resolved "http://registry.npm.taobao.org/styled-is/download/styled-is-1.1.5.tgz#acd8ad180217abea036e4f2cc58593899871f02a"
 
-styled-normalize@^8.0.4:
-  version "8.0.4"
-  resolved "http://registry.npm.taobao.org/styled-normalize/download/styled-normalize-8.0.4.tgz#6a0885dc16c61d88813dab8f5137da928fe0c947"
+styled-normalize@^8.0.6:
+  version "8.0.6"
+  resolved "http://registry.npm.taobao.org/styled-normalize/download/styled-normalize-8.0.6.tgz#f27f87292f46aa79ad6db6339aff5db529df3c91"
+  integrity sha1-8n+HKS9GqnmtbbYzmv9dtSnfPJE=
 
 stylehacks@^4.0.0:
   version "4.0.1"
@@ -9852,13 +9894,15 @@ tslint-clean-code@^0.2.9:
     memoize-decorator "^1.0.2"
     tsutils "2.7.1"
 
-tslint-config-prettier@^1.17.0:
-  version "1.17.0"
-  resolved "http://registry.npm.taobao.org/tslint-config-prettier/download/tslint-config-prettier-1.17.0.tgz#946ed6117f98f3659a65848279156d87628c33dc"
+tslint-config-prettier@^1.18.0:
+  version "1.18.0"
+  resolved "http://registry.npm.taobao.org/tslint-config-prettier/download/tslint-config-prettier-1.18.0.tgz#75f140bde947d35d8f0d238e0ebf809d64592c37"
+  integrity sha1-dfFAvelH012PDSOODr+AnWRZLDc=
 
-tslint-immutable@^5.1.0:
-  version "5.1.0"
-  resolved "http://registry.npm.taobao.org/tslint-immutable/download/tslint-immutable-5.1.0.tgz#2d0f5ff14f5c6de7878a34498041ada1a634fb6e"
+tslint-immutable@^5.1.2:
+  version "5.1.2"
+  resolved "http://registry.npm.taobao.org/tslint-immutable/download/tslint-immutable-5.1.2.tgz#9313f94f0eab3a667e305d2f37851ec5d24b8de5"
+  integrity sha1-kxP5Tw6rOmZ+MF0vN4UexdJLjeU=
   dependencies:
     tsutils "^2.28.0 || ^3.0.0"
 
@@ -9967,9 +10011,10 @@ typescript-template-language-service-decorator@^2.0.0:
   version "2.2.0"
   resolved "http://registry.npm.taobao.org/typescript-template-language-service-decorator/download/typescript-template-language-service-decorator-2.2.0.tgz#4ee6d580f307fb9239978e69626f2775b8a59b2a"
 
-typescript@3.2.4:
-  version "3.2.4"
-  resolved "http://registry.npm.taobao.org/typescript/download/typescript-3.2.4.tgz#c585cb952912263d915b462726ce244ba510ef3d"
+typescript@3.3.3:
+  version "3.3.3"
+  resolved "http://registry.npm.taobao.org/typescript/download/typescript-3.3.3.tgz#f1657fc7daa27e1a8930758ace9ae8da31403221"
+  integrity sha1-8WV/x9qifhqJMHWKzpro2jFAMiE=
 
 ua-parser-js@^0.7.18:
   version "0.7.19"
