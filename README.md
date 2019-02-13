@@ -22,6 +22,13 @@
 - fixed collocation (句型、固定搭配)
 - translation
 
+## Vocabulary
+
+This project uses following Properties for Japanese Knowledge Graph:
+
+- *prov:wasDerivedFrom* entity from which the entry was derived
+- *rdfs:comment* lecture notes
+
 ## Technology
 
 This project demonstrates basic usage of SoLiD POD (Linked Data Platform) and plugin architecture of SlateJS.
